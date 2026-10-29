@@ -1,0 +1,56 @@
+{
+ "anchoring": {
+  "sonnet": [
+   {
+    "arm": "with_target",
+    "n_scenarios": "33",
+    "n_engine": "33",
+    "loss_mean": "6651878.99388533",
+    "loss_median": "6698677.070427915",
+    "loss_p10": "5742154.515727678",
+    "loss_p90": "7548848.109114166",
+    "share_within_tol": "0.21212121212121213",
+    "share_above_target": "1.0",
+    "n_breaches": "10"
+   },
+   {
+    "arm": "without_target",
+    "n_scenarios": "33",
+    "n_engine": "33",
+    "loss_mean": "8486818.437526468",
+    "loss_median": "8642214.700226346",
+    "loss_p10": "5022475.215940772",
+    "loss_p90": "11221700.247851565",
+    "share_within_tol": "0.18181818181818182",
+    "share_above_target": "0.8787878787878788",
+    "n_breaches": "3"
+   }
+  ],
+  "haiku": [
+   {
+    "arm": "with_target",
+    "n_scenarios": "63",
+    "n_engine": "63",
+    "loss_mean": "5547510.400366903",
+    "loss_median": "5772066.436376678",
+    "loss_p10": "4180323.7398990234",
+    "loss_p90": "6759360.246769718",
+    "share_within_tol": "0.5238095238095238",
+    "share_above_target": "0.7301587301587301",
+    "n_breaches": "11"
+   },
+   {
+    "arm": "without_target",
+    "n_scenarios": "24",
+    "n_engine": "24",
+    "loss_mean": "2813512.3564884136",
+    "loss_median": "1950439.3718129399",
+    "loss_p10": "1086150.091000972",
+    "loss_p90": "5142809.487123798",
+    "share_within_tol": "0.16666666666666666",
+    "share_above_target": "0.125",
+    "n_breaches": "0"
+   }
+  ]
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "live_daily_sonnet": {
+  "label": "Sonnet 5.5, daily-model engine (final)",
+  "arms": [
+   {
+    "arm": "claude",
+    "breaches_mean": 11.2,
+    "breaches_sd": 0.447214,
+    "median_d2": 155.723,
+    "median_q": 0.0137255,
+    "driver_coverage": 0.342857,
+    "channel_coverage": 0.166667,
+    "engine_calls": 42.0
+   },
+   {
+    "arm": "random",
+    "breaches_mean": 0.0,
+    "breaches_sd": 0.0,
+    "median_d2": null,
+    "median_q": null,
+    "driver_coverage": 0.0,
+    "channel_coverage": 0.0,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "optimizer",
+    "breaches_mean": 8.0,
+    "breaches_sd": 1.41421,
+    "median_d2": 93.1962,
+    "median_q": 0.0411765,
+    "driver_coverage": 0.2,
+    "channel_coverage": 0.166667,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "cond_gaussian",
+    "breaches_mean": 0.2,
+    "breaches_sd": 0.447214,
+    "median_d2": 89.0169,
+    "median_q": 0.0470588,
+    "driver_coverage": 0.0285714,
+    "channel_coverage": 0.0333333,
+    "engine_calls": 144.0
+   }
+  ],
+  "n_scenarios": 176,
+  "n_ranked": 59
+ },
+ "live_full_sonnet": {
+  "label": "Sonnet 5.5, earlier engine",
+  "arms": [
+   {
+    "arm": "claude",
+    "breaches_mean": 9.8,
+    "breaches_sd": 2.77489,
+    "median_d2": 158.648,
+    "median_q": 0.014902,
+    "driver_coverage": 0.314286,
+    "channel_coverage": 0.166667,
+    "engine_calls": 45.0
+   },
+   {
+    "arm": "random",
+    "breaches_mean": 0.0,
+    "breaches_sd": 0.0,
+    "median_d2": null,
+    "median_q": null,
+    "driver_coverage": 0.0,
+    "channel_coverage": 0.0,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "optimizer",
+    "breaches_mean": 15.4,
+    "breaches_sd": 2.88097,
+    "median_d2": 93.248,
+    "median_q": 0.0411765,
+    "driver_coverage": 0.228571,
+    "channel_coverage": 0.166667,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "cond_gaussian",
+    "breaches_mean": 4.4,
+    "breaches_sd": 0.894427,
+    "median_d2": 105.103,
+    "median_q": 0.0262745,
+    "driver_coverage": 0.142857,
+    "channel_coverage": 0.166667,
+    "engine_calls": 144.0
+   }
+  ],
+  "n_scenarios": 170,
+  "n_ranked": 55
+ },
+ "live_full": {
+  "label": "Haiku 5.5, earlier engine",
+  "arms": [
+   {
+    "arm": "claude",
+    "breaches_mean": 3.6,
+    "breaches_sd": 2.30217,
+    "median_d2": 144.615,
+    "median_q": 0.0184314,
+    "driver_coverage": 0.285714,
+    "channel_coverage": 0.166667,
+    "engine_calls": 36.0
+   },
+   {
+    "arm": "random",
+    "breaches_mean": 0.0,
+    "breaches_sd": 0.0,
+    "median_d2": null,
+    "median_q": null,
+    "driver_coverage": 0.0,
+    "channel_coverage": 0.0,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "optimizer",
+    "breaches_mean": 15.4,
+    "breaches_sd": 2.88097,
+    "median_d2": 93.248,
+    "median_q": 0.0411765,
+    "driver_coverage": 0.228571,
+    "channel_coverage": 0.166667,
+    "engine_calls": 144.0
+   },
+   {
+    "arm": "cond_gaussian",
+    "breaches_mean": 4.4,
+    "breaches_sd": 0.894427,
+    "median_d2": 105.103,
+    "median_q": 0.0262745,
+    "driver_coverage": 0.142857,
+    "channel_coverage": 0.166667,
+    "engine_calls": 144.0
+   }
+  ],
+  "n_scenarios": 165,
+  "n_ranked": 18
+ }
+}

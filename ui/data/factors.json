@@ -1,0 +1,172 @@
+{
+ "walk_forward": [
+  {
+   "target": "lw",
+   "model": "M0 gas+load",
+   "oos_r2": "0.469",
+   "oos_rmse": "0.505",
+   "resid_autocorr": "0.62"
+  },
+  {
+   "target": "lw",
+   "model": "M1 +season",
+   "oos_r2": "0.484",
+   "oos_rmse": "0.498",
+   "resid_autocorr": "0.61"
+  },
+  {
+   "target": "lw",
+   "model": "M2 +weather",
+   "oos_r2": "0.485",
+   "oos_rmse": "0.497",
+   "resid_autocorr": "0.61"
+  },
+  {
+   "target": "lw",
+   "model": "M3 +persistence",
+   "oos_r2": "0.683",
+   "oos_rmse": "0.39",
+   "resid_autocorr": "0.24"
+  },
+  {
+   "target": "lw",
+   "model": "M4 M2+wind,nuclear,hydro",
+   "oos_r2": "0.486",
+   "oos_rmse": "0.497",
+   "resid_autocorr": "0.7"
+  },
+  {
+   "target": "lw",
+   "model": "M5 M2+net load",
+   "oos_r2": "0.45",
+   "oos_rmse": "0.514",
+   "resid_autocorr": "0.65"
+  },
+  {
+   "target": "lw",
+   "model": "M6 M2+exo+dual/gas (endogenous)",
+   "oos_r2": "0.495",
+   "oos_rmse": "0.492",
+   "resid_autocorr": "0.69"
+  },
+  {
+   "target": "lw",
+   "model": "M7 persistence+exo",
+   "oos_r2": "0.673",
+   "oos_rmse": "0.396",
+   "resid_autocorr": "0.44"
+  },
+  {
+   "target": "c",
+   "model": "M0 gas+load",
+   "oos_r2": "0.112",
+   "oos_rmse": "30.281",
+   "resid_autocorr": "0.54"
+  },
+  {
+   "target": "c",
+   "model": "M1 +season",
+   "oos_r2": "0.188",
+   "oos_rmse": "28.954",
+   "resid_autocorr": "0.5"
+  },
+  {
+   "target": "c",
+   "model": "M2 +weather",
+   "oos_r2": "0.209",
+   "oos_rmse": "28.579",
+   "resid_autocorr": "0.49"
+  },
+  {
+   "target": "c",
+   "model": "M3 +persistence",
+   "oos_r2": "0.422",
+   "oos_rmse": "24.423",
+   "resid_autocorr": "0.08"
+  },
+  {
+   "target": "c",
+   "model": "M4 M2+wind,nuclear,hydro",
+   "oos_r2": "0.253",
+   "oos_rmse": "27.779",
+   "resid_autocorr": "0.51"
+  },
+  {
+   "target": "c",
+   "model": "M5 M2+net load",
+   "oos_r2": "0.229",
+   "oos_rmse": "28.224",
+   "resid_autocorr": "0.49"
+  },
+  {
+   "target": "c",
+   "model": "M6 M2+exo+dual/gas (endogenous)",
+   "oos_r2": "0.287",
+   "oos_rmse": "27.142",
+   "resid_autocorr": "0.5"
+  },
+  {
+   "target": "c",
+   "model": "M7 persistence+exo",
+   "oos_r2": "0.434",
+   "oos_rmse": "24.171",
+   "resid_autocorr": "0.14"
+  },
+  {
+   "target": "d",
+   "model": "M0 gas+load",
+   "oos_r2": "-0.012",
+   "oos_rmse": "0.318",
+   "resid_autocorr": "0.39"
+  },
+  {
+   "target": "d",
+   "model": "M1 +season",
+   "oos_r2": "-0.003",
+   "oos_rmse": "0.317",
+   "resid_autocorr": "0.39"
+  },
+  {
+   "target": "d",
+   "model": "M2 +weather",
+   "oos_r2": "-0.003",
+   "oos_rmse": "0.317",
+   "resid_autocorr": "0.39"
+  },
+  {
+   "target": "d",
+   "model": "M3 +persistence",
+   "oos_r2": "0.137",
+   "oos_rmse": "0.294",
+   "resid_autocorr": "0.12"
+  },
+  {
+   "target": "d",
+   "model": "M4 M2+wind,nuclear,hydro",
+   "oos_r2": "0.066",
+   "oos_rmse": "0.306",
+   "resid_autocorr": "0.42"
+  },
+  {
+   "target": "d",
+   "model": "M5 M2+net load",
+   "oos_r2": "0.026",
+   "oos_rmse": "0.312",
+   "resid_autocorr": "0.39"
+  },
+  {
+   "target": "d",
+   "model": "M6 M2+exo+dual/gas (endogenous)",
+   "oos_r2": "0.05",
+   "oos_rmse": "0.309",
+   "resid_autocorr": "0.42"
+  },
+  {
+   "target": "d",
+   "model": "M7 persistence+exo",
+   "oos_r2": "0.196",
+   "oos_rmse": "0.284",
+   "resid_autocorr": "0.17"
+  }
+ ]
+}

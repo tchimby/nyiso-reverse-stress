@@ -1,0 +1,12 @@
+{
+ "title": "NYISO reverse stress testing agent",
+ "objective": "Start from a loss of at least $5M (25% of $20M) and find the most plausible scenarios that cause it; Claude proposes typed shock vectors, an engine computes P&L, plausibility is D^2 and rank q against 2019-2025.",
+ "caveats": [
+  "q is a rank against about 250 windows, not a probability",
+  "single-channel book: every ranked scenario loses mostly on zone_volume",
+  "sizing rule v1 is not met on the daily-model engine (4 of 5 breaches)",
+  "coherence grades come from an LLM judge, human grading pending",
+  "one seed per run; Claude arm uses fewer engine calls than baselines"
+ ],
+ "data": "NYISO public data, aggregated daily; raw files are not distributed"
+}
