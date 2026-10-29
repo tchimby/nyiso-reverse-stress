@@ -1,0 +1,4 @@
+prompt_version,label,n_scenarios,n_accepted,rejection_rate,fabricated_analogues,n_distinct_breaches,median_q,driver_coverage,channel_coverage,stated_rel_abs_median
+v1,"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30 | plumbing only: FakeClient ignores the prompt",24,24,0,0,0,,0,0,8.77859
+v2,"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30 | plumbing only: FakeClient ignores the prompt",24,24,0,0,0,,0,0,8.77859
+v3,"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30 | plumbing only: FakeClient ignores the prompt",24,24,0,0,0,,0,0,8.77859

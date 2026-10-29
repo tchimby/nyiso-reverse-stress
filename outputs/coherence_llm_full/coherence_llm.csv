@@ -1,0 +1,19 @@
+scenario,judge_model,causal_chain,shocks_explained,duration_matches,analogue_correct_relevant,no_contradiction,total,mech_zero,note
+live_full:GS-W8-pocket-spread-10d-rt-premium,claude-sonnet-5-5,1,1,1,1,1,1.0,[],P1 gain implies a WEST price move that isn't shocked; minor.
+live_full:LLS-SUM-C-30d-DA-overforecast-gas,claude-sonnet-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],WEST -40% and the pocket spread widening are unexplained; the analogue is only loosely relevant.
+live_full:GS-W11-henry-hub-surge-ny-basis-6d,claude-sonnet-5-5,1,1,1,1,1,1.0,[],Coherent gas-surge story; empty analogue with low confidence.
+live_full:LLS-SUM-F-30d-gas-dart-spread-grind,claude-sonnet-5-5,1,0,1,1,1,0.8,[],DART -40% and WEST -25% are asserted with no cause.
+live_full:GS-W1-NYC-gas-squeeze,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Pipeline-outage chain is coherent; Elliott is a relevant analogue.
+live_full:GS-W18-pocket-spread-12d-flat-load,claude-sonnet-5-5,1,1,1,1,0,0.8,['no_contradiction'],"Twelve days matches; basis and spread explained; no HH shock, consistent."
+live_full:WIN_CS_04_pocket_congestion_only,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],"Cold snap, congestion and spread consistent; Elliott analogue is apt."
+live_full:LLS-SUM-02-ZONE-VOLUME,claude-sonnet-5-5,0,1,1,0,0,0.4,['analogue_correct_relevant'],No mechanism for spread widening when NYC load is absent; 'moderately above' conflicts with -50%.
+live_full:HW-CONG-30D-70,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Heat, constraint, spread chain is coherent; empty analogue at low confidence is acceptable."
+live_full:GS-W-02-CityGateBasisSpread,claude-sonnet-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']","Pipeline, basis, heat rate, spread chain is coherent; Elliott is a relevant winter analogue."
+live_full:GS-W-05-CityGateCongestionShock,claude-sonnet-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']",Pure congestion shock is consistent; spread of 350 is close to Elliott's 338.5.
+live_full:LLS-SUM-D-30d-dart-discount-spread,claude-sonnet-5-5,1,0,1,1,1,0.8,[],DART and WEST channels are explained; the +60 spread widening has no stated cause.
+live_full:LLS-SUM-01-upstate-surplus-combined,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Surplus pushes WEST down and widens the spread; Gold Book is used for sizing and the -900 matches.
+live_full:HW-S3-gas-cost-basis-and-moderate-spread-30d,claude-sonnet-5-5,0,0,1,1,0,0.4,[],Gas basis is not tied to the heat wave; the 4.65M + 1.15M components don't sum to 5.5M.
+live_full:LLS-CONG-30D-02,claude-sonnet-5-5,0,0,1,1,0,0.4,[],Narrative admits load shortfall doesn't imply the spread widening; WEST -5% unexplained.
+live_full:WIN_CS_11_five_day_rt_scarcity_spread,claude-sonnet-5-5,0,1,1,0,0,0.4,[],Upstate tightening cannot cause WEST price drop; Elliott cited but analogue empty.
+live_full:GS-W2-NYC-constraint-no-HH,claude-sonnet-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']",Pure local spread shock; Elliott analogue relevant and consistent.
+live_full:CS-W2-spread-dart-5d,claude-sonnet-5-5,1,0,1,0,1,0.6,"['shocks_explained', 'analogue_correct_relevant']","Load ratio 1.05 never explained; otherwise coherent, analogue relevant."

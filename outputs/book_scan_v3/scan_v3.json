@@ -1,0 +1,1819 @@
+{
+ "grid": {
+  "P1": [
+   50.0,
+   100.0,
+   150.0
+  ],
+  "P2": [
+   25.0,
+   50.0
+  ],
+  "P3": [
+   50.0
+  ],
+  "P4": [
+   50.0,
+   100.0
+  ],
+  "P5": [
+   80.0,
+   100.0,
+   120.0,
+   140.0
+  ],
+  "P6": [
+   25.0
+  ]
+ },
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "budget": 144,
+ "n_candidates": 48,
+ "selected_index": null,
+ "selected_failed_conditions": [
+  "c",
+  "b",
+  "no_candidate"
+ ],
+ "n_admissible": 0,
+ "candidates": [
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1664456.2949827504,
+    "worst_30d_ratio": 0.3328912589965501
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2384378.567684857,
+    "worst_30d_ratio": 0.47687571353697145
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     5,
+     3,
+     3
+    ],
+    "min_breaches": 3,
+    "share": 1.1962818951465193,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 3104300.840386965,
+    "worst_30d_ratio": 0.620860168077393
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 11
+    },
+    "season_counts": {
+     "winter": 11
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 3824223.113089072,
+    "worst_30d_ratio": 0.7648446226178144
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1647599.3539965618,
+    "worst_30d_ratio": 0.3295198707993124
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2266056.067684857,
+    "worst_30d_ratio": 0.4532112135369714
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     4,
+     4,
+     4
+    ],
+    "min_breaches": 4,
+    "share": 1.160015450918764,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 2985978.3403869653,
+    "worst_30d_ratio": 0.5971956680773931
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 12
+    },
+    "season_counts": {
+     "winter": 12
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 3705900.6130890716,
+    "worst_30d_ratio": 0.7411801226178143
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 985104.4427931528,
+    "worst_30d_ratio": 0.19702088855863056
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1563933.2038387097,
+    "worst_30d_ratio": 0.31278664076774193
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2283855.476540817,
+    "worst_30d_ratio": 0.4567710953081634
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     5,
+     6,
+     4
+    ],
+    "min_breaches": 4,
+    "share": 1.4059121313664853,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 3003777.749242924,
+    "worst_30d_ratio": 0.6007555498485848
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 15
+    },
+    "season_counts": {
+     "winter": 15
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1012438.4427931528,
+    "worst_30d_ratio": 0.20248768855863056
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1576422.6151009684,
+    "worst_30d_ratio": 0.31528452302019366
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2165532.9765408174,
+    "worst_30d_ratio": 0.4331065953081635
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 50.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     4,
+     4,
+     4
+    ],
+    "min_breaches": 4,
+    "share": 1.372067433170902,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 2885455.249242924,
+    "worst_30d_ratio": 0.5770910498485848
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 12
+    },
+    "season_counts": {
+     "winter": 12
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1527991.3808421995,
+    "worst_30d_ratio": 0.30559827616843993
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2099203.755192754,
+    "worst_30d_ratio": 0.4198407510385508
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     3,
+     4,
+     4
+    ],
+    "min_breaches": 3,
+    "share": 1.114097394543107,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 2670416.1295433077,
+    "worst_30d_ratio": 0.5340832259086615
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 11
+    },
+    "season_counts": {
+     "winter": 11
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 3354880.0023508165,
+    "worst_30d_ratio": 0.6709760004701633
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1550818.4449010454,
+    "worst_30d_ratio": 0.3101636889802091
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2119576.42185942,
+    "worst_30d_ratio": 0.42391528437188397
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2690788.7962099747,
+    "worst_30d_ratio": 0.5381577592419949
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     4,
+     4,
+     5
+    ],
+    "min_breaches": 4,
+    "share": 1.062152716985729,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 3262001.170560529,
+    "worst_30d_ratio": 0.6524002341121058
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 13
+    },
+    "season_counts": {
+     "winter": 13
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1127057.3192804041,
+    "worst_30d_ratio": 0.22541146385608082
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1456814.6419466059,
+    "worst_30d_ratio": 0.29136292838932115
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2028027.0162971604,
+    "worst_30d_ratio": 0.40560540325943206
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     2,
+     3,
+     3
+    ],
+    "min_breaches": 2,
+    "share": 1.3219055296399773,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 2599239.390647715,
+    "worst_30d_ratio": 0.519847878129543
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 8
+    },
+    "season_counts": {
+     "winter": 8
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1272796.4859470706,
+    "worst_30d_ratio": 0.2545592971894141
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1482158.8130961424,
+    "worst_30d_ratio": 0.2964317626192285
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2048399.682963827,
+    "worst_30d_ratio": 0.40967993659276536
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 100.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2619612.0573143815,
+    "worst_30d_ratio": 0.5239224114628763
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1674175.296610428,
+    "worst_30d_ratio": 0.3348350593220856
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1999968.448705058,
+    "worst_30d_ratio": 0.3999936897410116
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2571180.8230556124,
+    "worst_30d_ratio": 0.5142361646111224
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     4,
+     3,
+     3
+    ],
+    "min_breaches": 3,
+    "share": 1.0146590942212719,
+    "n_channels": 1,
+    "channels": [
+     "zone_volume"
+    ],
+    "n_seasons": 1,
+    "seasons": [
+     "winter"
+    ],
+    "worst_30d_loss_usd": 3142393.1974061667,
+    "worst_30d_ratio": 0.6284786394812334
+   },
+   "mix": {
+    "channel_counts": {
+     "zone_volume": 10
+    },
+    "season_counts": {
+     "winter": 10
+    },
+    "max_channel_share": 1.0
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1816981.963277094,
+    "worst_30d_ratio": 0.3633963926554188
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2072147.26834163,
+    "worst_30d_ratio": 0.414429453668326
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2591553.489722279,
+    "worst_30d_ratio": 0.5183106979444558
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 25.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 3162765.864072833,
+    "worst_30d_ratio": 0.6325531728145667
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1594237.5127927081,
+    "worst_30d_ratio": 0.3188475025585416
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1633831.4878288154,
+    "worst_30d_ratio": 0.3267662975657631
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1928791.7098094644,
+    "worst_30d_ratio": 0.3857583419618929
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 50.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2500004.084160019,
+    "worst_30d_ratio": 0.5000008168320038
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 80.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1739976.6794593749,
+    "worst_30d_ratio": 0.347995335891875
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 100.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 1776638.154495482,
+    "worst_30d_ratio": 0.3553276308990964
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 120.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2031803.4595600176,
+    "worst_30d_ratio": 0.4063606919120035
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "sizes": {
+    "P1": 150.0,
+    "P2": 50.0,
+    "P3": 50.0,
+    "P4": 100.0,
+    "P5": 140.0,
+    "P6": 25.0
+   },
+   "stats": {
+    "breaches_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "min_breaches": 0,
+    "share": NaN,
+    "n_channels": 0,
+    "channels": [],
+    "n_seasons": 0,
+    "seasons": [],
+    "worst_30d_loss_usd": 2520376.7508266857,
+    "worst_30d_ratio": 0.5040753501653371
+   },
+   "mix": {
+    "channel_counts": {},
+    "season_counts": {},
+    "max_channel_share": NaN
+   },
+   "failed_v1": [
+    "a",
+    "b",
+    "c"
+   ]
+  }
+ ]
+}

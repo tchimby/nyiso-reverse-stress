@@ -1,0 +1,21 @@
+label,run,kind,rule,count,rate,penalty_sum,n_scenarios
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep0,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep0,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep1,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep1,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep2,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep2,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep3,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep3,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep4,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep4,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",anchor_with_target,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",anchor_with_target,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",anchor_without_target,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",anchor_without_target,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v1,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v1,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v2,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v2,soft,driver_class_not_overused,12,0.5,12,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v3,overall,rejected,0,0,,24
+"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",prompt_v3,soft,driver_class_not_overused,12,0.5,12,24

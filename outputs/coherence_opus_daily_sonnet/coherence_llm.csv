@@ -1,0 +1,60 @@
+scenario,judge_model,causal_chain,shocks_explained,duration_matches,analogue_correct_relevant,no_contradiction,total,mech_zero,note
+live_daily_sonnet:HW-S10-month-long-deep-west-discount-gas-basis,claude-opus-5-5,0,0,1,1,0,0.4,[],Heat wave at typical load yet WEST collapses; gas basis cause unstated
+live_daily_sonnet:HW_S8_upstate_glut_20d,claude-opus-5-5,1,0,1,1,0,0.6,[],Dart cause unstated; heat wave with oversupply; spread 65 not 'small'
+live_daily_sonnet:LLS_SUMMER_BALANCED_MIX_7,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent shortfall chain; all shocks and 28-day duration explained
+live_daily_sonnet:LLS_SUM_04_rt_below_da_grind,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Dart via over-procurement explained; Gold Book analogue relevant
+live_daily_sonnet:LLS_SUMMER_PRICE_COLLAPSE_30D,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],"Consistent shortfall, trapped-surplus spread story; analogue matches -1400 MW"
+live_daily_sonnet:LLS_SUM_11_deep_west_collapse_system_gas,claude-opus-5-5,1,0,1,0,0,0.4,['analogue_correct_relevant'],1500 MW shortfall at normal peak load; NY basis rise unexplained
+live_daily_sonnet:HW_S7_soft_upstate_basis_drag,claude-opus-5-5,0,0,1,1,0,0.4,[],"Shock list not chain; heat wave with soft gas; dart, basis causes unstated"
+live_daily_sonnet:HW_SUMMER_SOFT_GAS_WEAK_WEST,claude-opus-5-5,1,1,1,1,1,1.0,[],Weak gas and upstate oversupply explain the WEST drop; coherent.
+live_daily_sonnet:HW_S8_three_week_spread_with_weak_West,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],DART -30 and gas -10 have no stated cause.
+live_daily_sonnet:LLS_SUM_F_zone_volume_persistent_spread,claude-opus-5-5,0,0,1,0,1,0.4,['analogue_correct_relevant'],Load shortfall not linked to the NYC squeeze; gas basis unexplained.
+live_daily_sonnet:LLS_SUM_07_pure_spread_full_load,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Gas basis +2 is applied without any stated driver.
+live_daily_sonnet:HW_SUMMER_WEST_PRICE_DECOUPLING,claude-opus-5-5,1,1,1,1,1,1.0,[],Trapped upstate supply explains WEST decoupling; mismatch is acknowledged.
+live_daily_sonnet:LLS_SUMMER_DEEP_PRICE_COLLAPSE_30D,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Henry Hub -35% is not explained by upstate oversupply.
+live_daily_sonnet:HW_S4_long_moderate_congestion_30d,claude-opus-5-5,1,1,1,1,1,1.0,[],Clean congestion-driven chain; estimates are consistent.
+live_daily_sonnet:HW_S5_weak_west_wide_spread_25d,claude-opus-5-5,1,1,1,1,0,0.8,[],'Load gains' conflict with short NYC load; P1/P4 'reduced gains' later called losses.
+live_daily_sonnet:LLS_SUMMER_SUSTAINED_SPREAD_30D,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Coherent; -500 MW matches Gold Book near-term high end.
+live_daily_sonnet:LLS_SUM_09_deep_west_slump_gas_basis,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],"+1.5 basis has no driver; '2035-style' 1,200 MW vs analogue 1,400 MW."
+live_daily_sonnet:LLS_SUM_12_24day_congestion_with_weak_west,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],NY gas basis +1.5 has no stated driver; otherwise consistent.
+live_daily_sonnet:LLS_SUM_6_west_slump_moderate_spread_basis,claude-opus-5-5,1,1,1,1,0,0.8,[],Narrative cites $1.00 basis absent from shocks; 300 MW miss implausibly drives -35%.
+live_daily_sonnet:LLS_SUMMER_MIXED_SPREAD_GAS_3,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent congestion-led story; empty analogue with low confidence.
+live_daily_sonnet:LLS_SUM_D_system_price_slump,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],+$3 NYC gas basis has no stated driver.
+live_daily_sonnet:HW_SUMMER_WEST_SOFTNESS_MILD_SPREAD,claude-opus-5-5,0,1,1,1,0,0.6,[],Heat wave drives nothing; zone-volume channel cited despite load ratio 1.0
+live_daily_sonnet:HW_SUMMER_CONGESTION_GRIND,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent heat to load to import-constraint chain; WEST softness justified
+live_daily_sonnet:LLS_SUM_E_gas_slump_moderate_spread,claude-opus-5-5,0,0,1,0,0,0.2,['analogue_correct_relevant'],"HH drop, spread widening, NYC basis unexplained; basis rise conflicts with shortfall"
+live_daily_sonnet:HW-S11-small-spread-deep-west-slump-rt-below-da,claude-opus-5-5,0,0,1,1,0,0.4,[],"Hot summer yet weak demand; spread sized by design, not cause"
+live_daily_sonnet:LLS_SUMMER_LOW_SPREAD_SYSTEM_10,claude-opus-5-5,1,0,1,1,0,0.6,[],Gas and DART unexplained; shortfall with load ratio 1.0 inconsistent
+live_daily_sonnet:HW_S4_moderate_spread_soft_west,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent load-driven spread and WEST softness; signs consistent
+live_daily_sonnet:CS_W_2_Elliott_style_RT_blowout,claude-opus-5-5,1,1,1,0,0,0.6,['analogue_correct_relevant'],"NYC basis said to cut P4, yet P4 gains from gas moves"
+live_daily_sonnet:LLS_SUM_4_persistent_spread_full_load,claude-opus-5-5,0,1,1,0,0,0.4,['analogue_correct_relevant'],"Load ratio picked from prior-round P&L; shortfall conflicts with full load, no spread driver."
+live_daily_sonnet:GS_W_SHORT_SEVERE_SQUEEZE_10D,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent freeze-off story; -7.5M 'conservative' is below the itemized -7.6M.
+live_daily_sonnet:LLS_SUMMER_CONGESTION_MODERATE_4,claude-opus-5-5,1,1,1,1,1,1.0,[],Consistent soft-demand chain; P4 gas sign effect is ambiguous but plausible.
+live_daily_sonnet:HW_S3_persistent_summer_squeeze,claude-opus-5-5,0,0,1,1,0,0.4,[],Heat wave with WEST falling; basis unexplained; spikes excluded by P&L reasoning.
+live_daily_sonnet:LLS_SUMMER_SPREAD_PLUS_NY_BASIS_11,claude-opus-5-5,1,0,1,1,0,0.6,[],Gas basis +6 lacks a driver amid weak demand; claim it leaves power unmoved.
+live_daily_sonnet:HW_S7_low_load_weak_west_soft_RT_30d,claude-opus-5-5,0,1,1,1,0,0.6,[],Heat wave with normal load; well-forecast yet DA over-scheduled; P&L-driven exclusions.
+live_daily_sonnet:HW_S5_dart_overforecast_soft_west,claude-opus-5-5,1,1,1,1,1,1.0,[],Over-forecast heat explains weak WEST/RT; spread widening plausibly stated.
+live_daily_sonnet:LLS_SUMMER_DEEP_WEST_SLUMP_30D,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],"Gas, DART and spread widening asserted without any causal reason."
+live_daily_sonnet:LLS_SUM_J_moderate_spread_price_dip_30d,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],NY gas basis +2 has no driver in a shortfall story.
+live_daily_sonnet:LLS_SUM_9_system_price_slump_moderate_spread,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],"Gas, basis unexplained; analogue -900/2030 mismatches -1000, editions."
+live_daily_sonnet:HW_S6_mild_spread_weak_west_RT_soft_30d,claude-opus-5-5,0,0,1,1,0,0.4,[],No heat-to-spread mechanism; claims a lower figure but never states it.
+live_daily_sonnet:LLS_SUM_B_system_gas_softness,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],NYC gas basis premium unexplained amid weak demand.
+live_daily_sonnet:LLS_SUM_06_wide_soft_market,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Henry Hub softening stated without a cause.
+live_daily_sonnet:HW_S6_cheap_gas_heat_spread,claude-opus-5-5,1,1,1,1,1,1.0,[],"Coherent: cheap gas, high load, downstate peakers widen spread."
+live_daily_sonnet:LLS_SUMMER_CONGESTED_SOFT_22D,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Gas -25% and dart -15% asserted without causal link to shortfall.
+live_daily_sonnet:HW_S5_soft_gas_price_squeeze_all_long_legs,claude-opus-5-5,0,0,1,1,0,0.4,[],"Soft-price heat wave; gas, dart, spread lack drivers; contradicts heat-wave premise."
+live_daily_sonnet:HW_S8_gas_basis_squeezes_heat_rate,claude-opus-5-5,0,0,1,1,0,0.4,[],Gas basis blowout not moving power contradicts; spread widening unexplained.
+live_daily_sonnet:HW-S6-soft-west-prices-and-DA-premium,claude-opus-5-5,1,1,1,1,1,1.0,[],"Split weather, DA over-scheduling, and tight city coherently explain shocks."
+live_daily_sonnet:HW-S5-month-long-modest-spread-typical-load,claude-opus-5-5,0,1,1,1,1,0.8,[],Heat wave drives nothing; spread is attributed to transfer limits instead.
+live_daily_sonnet:LLS_SUM_01_west_glut_spread_grind,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Coherent chain; analogue matches -900 MW; zero shocks justified.
+live_daily_sonnet:LLS_SUMMER_LOW_SPREAD_LONG_COLLAPSE_30D,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Henry Hub -10% stated without causal explanation.
+live_daily_sonnet:HW_S7_soft_west_dart_wide_spread,claude-opus-5-5,1,0,1,1,0,0.6,[],DART -45 has no cause; it conflicts with a heat wave.
+live_daily_sonnet:LLS_SUM_L_full_load_spread_mild_gas_dip_30d,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Gas -10% is asserted without a driver; the rest is coherent.
+live_daily_sonnet:HW_SUMMER_SOFT_GAS_DEEP_WEST_DISCOUNT,claude-opus-5-5,0,0,1,1,0,0.4,[],Heat with typical load and gas -40; shocks chosen for loss.
+live_daily_sonnet:HW_S4_long_moderate_spread_soft_WEST,claude-opus-5-5,0,0,0,0,0,0.0,"['duration_matches', 'analogue_correct_relevant']","Spread set by plausibility, not cause; DART -20 unexplained in heat."
+live_daily_sonnet:HW-S7-month-long-soft-west-with-spread,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent: upstate surplus softens WEST; NYC tightness widens the spread.
+live_daily_sonnet:LLS_SUM_5_soft_gas_weak_west_wide_spread,claude-opus-5-5,1,0,1,0,1,0.6,['analogue_correct_relevant'],Gas -15% is asserted without a driver; the analogue is relevant.
+live_daily_sonnet:HW_S9_cheap_gas_deep_dart_soft_power,claude-opus-5-5,0,0,1,1,0,0.4,[],"Heat wave paired with gas -30, DART -60 and weak WEST, all unexplained."
+live_daily_sonnet:LLS_SUM_10_wide_spread_mild_west_slide,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent; spread widening asserted via NYC constraints; empty analogue with low confidence
+live_daily_sonnet:HW-S8-rt-below-da-and-mild-load,claude-opus-5-5,1,1,1,1,0,0.8,[],Heat wave with elevated load yet WEST -30% contradicts the driver
+live_daily_sonnet:LLS_SUM_8_gas_slump_and_2035_shortfall,claude-opus-5-5,1,1,0,0,1,0.6,['analogue_correct_relevant'],Structural early shortfall should persist; a 30-day window is inconsistent

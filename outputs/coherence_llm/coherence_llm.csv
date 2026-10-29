@@ -1,0 +1,42 @@
+scenario,judge_model,causal_chain,shocks_explained,duration_matches,analogue_correct_relevant,no_contradiction,total,mech_zero,note
+live_haiku_s2:LLS-SUM-11-WEST-LED-30D,claude-sonnet-5-5,1,0,1,1,1,0.8,[],Load shortfall to WEST drop is clear; the +40 spread widening has no stated mechanism.
+live_haiku_s3:LLS-SUM-07,claude-sonnet-5-5,0,0,1,1,1,0.6,[],No mechanism links load shortfall to the 70 spread widening or WEST fall.
+live_haiku_r1:HW-S10-spread-dart-mild-load,claude-sonnet-5-5,1,1,1,1,0,0.8,[],"$108k x $60 is about $6.5M for 5 days, not 30; scaling inconsistent."
+live_haiku_s2:LLS-SUM-05-SPREAD-WEST-SOFT,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Coherent: shortfall drives spread and WEST softness, 30 days consistent."
+live_haiku_s2:LLS-SUM-10-SPREAD-DART-30D,claude-sonnet-5-5,0,1,1,1,0,0.6,[],Lower load said to tighten N.Y.C. reserves and lift RT; self-contradictory.
+live_haiku_s2:CS-W-14_west_downturn_with_intense_pocket_spread,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Elliott is a relevant cold-snap analogue; spread 380 near 338.5 is consistent.
+live_haiku_r1:CS-W-13-deep-spread-seven-days,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Load, binding transfers and stranded upstate supply explain all shocks; 7 days matches."
+live_haiku_r1:HW-S5-zone-spread-with-real-time-premium,claude-sonnet-5-5,1,1,1,1,1,1.0,[],Coherent; the DART sign is a little odd for a heat wave but explained.
+live_haiku_s3:LLS-SUM-12,claude-sonnet-5-5,0,0,1,1,1,0.6,[],The $40 spread widening has no causal link to a load shortfall.
+live_haiku_s2:CS-W-03_short_intense_pocket_spike,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Spread is consistent with the Elliott analogue; 5 days matches.
+live_haiku_r1:CS-W-08-high-spread-short-rt-premium,claude-sonnet-5-5,1,1,1,1,0,0.8,[],"A DART rise is called a P3 loss, and WEST falls despite the cold, load and gas rises."
+live_haiku_r1:GS-3-upstate-glut-NYC-squeeze,claude-sonnet-5-5,1,1,1,0,0,0.6,['analogue_correct_relevant'],Upstate gas glut conflicts with an HH rise from disruption; 250 is not 'close' to 338.5.
+live_haiku_s1:CS-WIN-01-pocket-spread-burst,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Consistent; the Elliott analogue is relevant and within 30% of the shock.
+live_haiku_s2:LLS-SUM-04-SPREAD-PURE,claude-sonnet-5-5,0,1,1,1,0,0.6,[],"Lower load is said to tighten the pocket's reserve margin, which is contradictory."
+live_haiku_s3:WIN-COLD-POCKET-5D,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Coherent; Elliott spread 338.5 matches the 340 shock.
+live_haiku_s2:CS-W-07_west_price_collapse_pocket_spread,claude-sonnet-5-5,1,1,1,1,1,1.0,[],WEST drop in a cold snap is odd but explained by upstate supply.
+live_haiku_s4:GS-W-01-ZoneJ-pipeline-6d,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],"Gas, basis, load and spread each have a stated cause; Elliott relevant."
+live_haiku_s3:WIN-RT-PREMIUM-POCKET-5D,claude-sonnet-5-5,1,1,1,1,0,0.8,[],Upstate units trip yet WEST unshocked and spread widens; tension.
+live_haiku_s4:GS-W-07-spread-persistent-7d,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Consistent seven-day gas-constraint story; Elliott analogue relevant.
+live_haiku_s1:GS-E-short-severe-spread-5d,claude-sonnet-5-5,1,1,1,1,0,0.8,['no_contradiction'],Gas delivery failure but gas prices unchanged; inconsistent.
+live_haiku_r1:CS-W-06-short-high-spread-rt-gap,claude-sonnet-5-5,1,0,1,1,1,0.8,[],WEST -10% and DART +80% lack stated causes.
+live_haiku_s2:GS-W1-gas-pipeline-spread-blowout,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Coherent; Elliott spread analogue relevant to winter NYC constraint.
+live_haiku_s3:LLS-SUM-18,claude-sonnet-5-5,1,0,1,1,1,0.8,['shocks_explained'],"Spread mechanism thin under lower load, but acceptable; 30 days consistent."
+live_haiku_r1:HW-S18-dart-discount-with-basis-and-spread,claude-sonnet-5-5,1,1,1,1,0,0.8,[],"Computed 5.5M vs stated 5.6M, and offsets by P2/P3 unreconciled."
+live_haiku_r1:HW-S12-flat-load-spread-persistent,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Flat load, spread-driven loss; all shocks addressed; consistent."
+live_haiku_s4:GS-W-02-cold-load-spread-5d,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Five-day cold/gas event consistent; Elliott analogue relevant.
+live_haiku_s2:LLS-SUM-06-GAS-SOFT-SPREAD,claude-sonnet-5-5,1,1,1,1,0,0.8,[],Weak demand cuts gas 40% yet basis widens adversely; spread widening unexplained.
+live_haiku_s2:CS-W-04_moderate_spread_six_day_load,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Cold snap, load and spread shocks explained; six days matches."
+live_haiku_s3:WIN-WEST-DEPRESSED-POCKET-6D,claude-sonnet-5-5,1,1,1,1,1,1.0,[],Export-constraint story covers WEST drop and spread; six days matches; empty analogue with low confidence.
+live_haiku_r1:HW-S16-wide-spread-west-slump,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Congestion widens spread, hydro/wind lowers WEST; 30 days matches; load neutral stated."
+live_haiku_s1:GS-B-elliott-style-spread-7d,claude-sonnet-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Pipeline outage drives gas and spread; Elliott is a relevant winter gas-curtailment analogue.
+live_haiku_s1:CS-WIN-11-seven-day-real-time-squeeze,claude-sonnet-5-5,0,0,1,1,0,0.4,[],"DART -70% has no mechanism and clashes with a load-up, constrained cold snap."
+live_haiku_s1:CS-WIN-09-west-drop-pocket-widening,claude-sonnet-5-5,1,1,1,1,1,1.0,[],Long upstate supply versus tight NYC explains WEST drop and spread; seven days matches.
+live_haiku_r1:HW-S13-mid-load-spread-dart-25d,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Load, spread and DART each explained; 25 days matches; P&L pieces roughly reconcile."
+live_haiku_s4:GS-W-10-upstate-decouple-pipeline-8d,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Pipeline binding explains basis, spread and WEST drop; eight days matches."
+live_haiku_r1:HW-S11-moderate-load-spread-dart-basis,claude-sonnet-5-5,1,1,1,1,0,0.8,[],Stated $5.2M doesn't reconcile with 6.2-1.0+0.6; RT below DA in a heat wave is odd.
+live_haiku_s1:CS-WIN-15-real-time-spike-pocket-gas,claude-sonnet-5-5,1,1,1,1,1,1.0,[],Coherent; each shock tied to the cold snap and held neutrals are explained.
+live_haiku_s3:WIN-SOFT-WEST-DART-5D,claude-sonnet-5-5,0,0,1,1,1,0.6,[],Cold-snap driver never appears in the chain; the -30% DART has no stated cause.
+live_haiku_s3:LLS-SUM-05,claude-sonnet-5-5,1,0,1,1,0,0.6,[],"Lower demand is paired with a widening pocket spread and rising pocket price, with no mechanism."
+live_haiku_s1:CS-WIN-18-gas-cost-thin-pocket,claude-sonnet-5-5,1,0,1,1,0,0.6,[],"The -5% WEST move has no cause while gas is +60%; basis is stated in $/MWh, not $/MMBtu."
+live_haiku_s3:WIN-GAS-BASIS-SQUEEZE-7D,claude-sonnet-5-5,1,1,1,1,1,1.0,[],"Gas, basis, load and spread are all explained; neutral WEST and DART are justified."

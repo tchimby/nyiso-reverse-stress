@@ -1,0 +1,17 @@
+label,arm,metric,n,mean,sd,min,max
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude,n_breaches,1,6,,6,6
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude,median_q,1,0.0313725,,0.0313725,0.0313725
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude,driver_coverage,1,0.285714,,0.285714,0.285714
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude,channel_coverage,1,0.166667,,0.166667,0.166667
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",random,n_breaches,1,0,,0,0
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",random,median_q,0,,,,
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",random,driver_coverage,1,0,,0,0
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",random,channel_coverage,1,0,,0,0
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",optimizer,n_breaches,1,21,,21,21
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",optimizer,median_q,1,0.0352941,,0.0352941,0.0352941
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",optimizer,driver_coverage,1,0.142857,,0.142857,0.142857
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",optimizer,channel_coverage,1,0.166667,,0.166667,0.166667
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",cond_gaussian,n_breaches,1,5,,5,5
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",cond_gaussian,median_q,1,0.0235294,,0.0235294,0.0235294
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",cond_gaussian,driver_coverage,1,0.285714,,0.285714,0.285714
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",cond_gaussian,channel_coverage,1,0.166667,,0.166667,0.166667

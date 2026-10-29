@@ -1,0 +1,21 @@
+LIVE CLAUDE run: up to 48 calls, model claude-haiku-5-5. Ctrl-C to stop.
+LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30
+seed=0 budget=144 repeats=1 fallback_book=False loss_target_usd=5,000,000 dry_run=False live=True
+agent (repeat 0): calls=18 accepted=53 rejected=1 loop_breaches=10
+engine calls per arm (repeat 0): {'claude': 53, 'random': 144, 'optimizer': 144, 'cond_gaussian': 144}
+               n_breaches_mean  n_breaches_sd  median_q_mean  median_d2_mean  driver_coverage_mean  channel_coverage_mean  rule_pass_share_mean  coherence_mean  engine_calls
+arm                                                                                                                                                                          
+claude                  10.000            NaN          0.018         147.817                 0.429                  0.167                 0.389           0.947            53
+random                   0.000            NaN            NaN             NaN                 0.000                  0.000                 0.583             NaN           144
+optimizer               19.000            NaN          0.039          93.296                 0.286                  0.167                 0.549           0.923           144
+cond_gaussian            4.000            NaN          0.025         104.213                 0.143                  0.167                 0.896           0.914           144
+gate (claude, repeat 0): rejected 1 of 54 (1.9%); hard rules fired: ['sign_consistent']
+wrote scenarios: outputs\live_haiku_r1\scenarios.jsonl
+wrote comparison: outputs\live_haiku_r1\comparison_table.csv
+wrote dispersion: outputs\live_haiku_r1\repeat_dispersion.csv
+wrote gate: outputs\live_haiku_r1\gate_rejection.csv
+wrote stated_vs_implied: outputs\live_haiku_r1\stated_vs_implied.csv
+wrote sensitivity: outputs\live_haiku_r1\sensitivity.csv
+wrote waterfall: outputs\live_haiku_r1\pnl_waterfall.png
+wrote notice: outputs\live_haiku_r1\NOTICE.txt
+wrote manifest: outputs\live_haiku_r1\manifest.json

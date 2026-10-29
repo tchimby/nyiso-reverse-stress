@@ -1,0 +1,19 @@
+scenario,judge_model,causal_chain,shocks_explained,duration_matches,analogue_correct_relevant,no_contradiction,total,mech_zero,note
+live_full:GS-W8-pocket-spread-10d-rt-premium,claude-opus-5-5,1,0,1,1,1,0.8,[],National Henry Hub +20% unexplained by a local N.Y.C. supply tightness.
+live_full:LLS-SUM-C-30d-DA-overforecast-gas,claude-opus-5-5,1,0,1,0,0,0.4,['analogue_correct_relevant'],WEST -40% unexplained; pocket spread widens despite lower load.
+live_full:GS-W11-henry-hub-surge-ny-basis-6d,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent national gas shock with explained pocket spread and P4 loss.
+live_full:LLS-SUM-F-30d-gas-dart-spread-grind,claude-opus-5-5,1,0,1,1,0,0.6,[],Extra WEST -25% unexplained; spread widens despite load shortfall.
+live_full:GS-W1-NYC-gas-squeeze,claude-opus-5-5,1,1,1,0,0,0.6,['analogue_correct_relevant'],Scarce Z6 gas but only +3 basis; P4 offsets despite gas spike.
+live_full:GS-W18-pocket-spread-12d-flat-load,claude-opus-5-5,1,1,1,1,0,0.8,['no_contradiction'],Consistent long-duration basis and spread squeeze; neutral channels justified.
+live_full:WIN_CS_04_pocket_congestion_only,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Coherent; neutral gas in cold snap is a stated isolation assumption.
+live_full:LLS-SUM-02-ZONE-VOLUME,claude-opus-5-5,0,0,1,0,0,0.2,['analogue_correct_relevant'],Missing N.Y.C. load should narrow the spread; DART and WEST drops unexplained.
+live_full:HW-CONG-30D-70,claude-opus-5-5,1,1,1,1,1,1.0,[],Coherent sustained congestion story; small load effect acknowledged.
+live_full:GS-W-02-CityGateBasisSpread,claude-opus-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']",City-gate basis drives the spread; Elliott is relevant; duration assumption stated.
+live_full:GS-W-05-CityGateCongestionShock,claude-opus-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']",Deep cold with normal load; gas-supply cap but no gas shock.
+live_full:LLS-SUM-D-30d-dart-discount-spread,claude-opus-5-5,1,0,1,1,0,0.6,[],Spread widening unexplained; claims load flat despite -1500 MW load shock.
+live_full:LLS-SUM-01-upstate-surplus-combined,claude-opus-5-5,1,1,1,0,1,0.8,['analogue_correct_relevant'],Upstate surplus lowers WEST and widens the spread; coherent and sized.
+live_full:HW-S3-gas-cost-basis-and-moderate-spread-30d,claude-opus-5-5,1,0,1,1,0,0.6,[],Gas basis unmotivated by heat wave; it hits P4 but not power prices.
+live_full:LLS-CONG-30D-02,claude-opus-5-5,0,0,1,1,0,0.4,[],Spread widening relies on an unmodeled derate that the load-shortfall driver contradicts.
+live_full:WIN_CS_11_five_day_rt_scarcity_spread,claude-opus-5-5,0,0,1,1,0,0.4,[],Tighter upstate supply cannot ease WEST 30%; cites Elliott without an analogue.
+live_full:GS-W2-NYC-constraint-no-HH,claude-opus-5-5,1,1,1,0,0,0.6,"['analogue_correct_relevant', 'no_contradiction']",Coherent pocket-only constraint; Elliott spread analogue is relevant and consistent.
+live_full:CS-W2-spread-dart-5d,claude-opus-5-5,0,0,1,0,0,0.2,"['shocks_explained', 'analogue_correct_relevant']",Cold snap cuts WEST 40% with no driver; load unexplained; DART mapped to swap.

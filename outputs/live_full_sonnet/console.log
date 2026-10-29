@@ -1,0 +1,21 @@
+LIVE CLAUDE run: up to 240 calls, model claude-sonnet-5-5. Ctrl-C to stop.
+LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30
+seed=0 budget=144 repeats=5 fallback_book=False loss_target_usd=5,000,000 dry_run=False live=True
+agent (repeat 0): calls=15 accepted=45 rejected=0 loop_breaches=13
+engine calls per arm (repeat 0): {'claude': 45, 'random': 144, 'optimizer': 144, 'cond_gaussian': 144}
+               n_breaches_mean  n_breaches_sd  median_q_mean  median_d2_mean  driver_coverage_mean  channel_coverage_mean  rule_pass_share_mean  coherence_mean  engine_calls
+arm                                                                                                                                                                          
+claude                   9.800          2.775          0.015         158.648                 0.314                  0.167                 0.574           0.921            45
+random                   0.000          0.000            NaN             NaN                 0.000                  0.000                 0.554             NaN           144
+optimizer               15.400          2.881          0.041          93.248                 0.229                  0.167                 0.540           0.923           144
+cond_gaussian            4.400          0.894          0.026         105.103                 0.143                  0.167                 0.908           0.920           144
+gate (claude, repeat 0): rejected 0 of 45 (0.0%); hard rules fired: none
+wrote scenarios: outputs\live_full_sonnet\scenarios.jsonl
+wrote comparison: outputs\live_full_sonnet\comparison_table.csv
+wrote dispersion: outputs\live_full_sonnet\repeat_dispersion.csv
+wrote gate: outputs\live_full_sonnet\gate_rejection.csv
+wrote stated_vs_implied: outputs\live_full_sonnet\stated_vs_implied.csv
+wrote sensitivity: outputs\live_full_sonnet\sensitivity.csv
+wrote waterfall: outputs\live_full_sonnet\pnl_waterfall.png
+wrote notice: outputs\live_full_sonnet\NOTICE.txt
+wrote manifest: outputs\live_full_sonnet\manifest.json

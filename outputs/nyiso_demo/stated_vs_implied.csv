@@ -1,0 +1,2 @@
+prompt_version,label,n,n_stated,n_scored,abs_err_mean,abs_err_median,abs_err_p90,rel_abs_median,rel_abs_p90,rel_err_median,share_within_20pct
+v3,"FAKE CLIENT - not Claude results | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",120,120,120,5.8641e+06,5.35405e+06,7.39753e+06,10.5988,39.0786,10.5988,0

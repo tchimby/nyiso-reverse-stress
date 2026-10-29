@@ -1,0 +1,1547 @@
+{
+ "config": {
+  "ALLOCATED_CAPITAL_USD": 20000000.0,
+  "DISTINCT_TAU_Z": 1.0,
+  "EARLY_STOP_BREACHES": 5,
+  "FALLBACK_BOOK": false,
+  "ITERATIONS_PER_SEED": 12,
+  "LOSS_TARGET_USD": 5000000.0,
+  "MARKET": "NYISO",
+  "N_SEEDS": 4,
+  "Q_ADVERSE_MAX": 0.05,
+  "Q_SEVERE_MAX": 0.01,
+  "SCENARIOS_PER_CALL": 3,
+  "WINDOW_DAYS": 10
+ },
+ "created_utc": "2026-10-28T20:18:20Z",
+ "data": {
+  "panel_date_range": {
+   "processed/nyiso_panel_manifest.json": [
+    "2019-01-01",
+    "2026-09-30"
+   ]
+  },
+  "processed": {
+   "nyiso_panel.csv": {
+    "built_utc": "2026-10-28T08:20:46Z",
+    "sha256": "e78b26d72616cab101a46a7fef14f530952a755a3dc47f8515a9c6c9eaa15072",
+    "source": "processed/nyiso_panel_manifest.json"
+   },
+   "nyiso_panel_2014_replay.csv": {
+    "built_utc": "2026-10-28T08:20:46Z",
+    "sha256": "2d185e3aa9624d9aae2905cdc11c8a71efa1da8dce23157c1d01c538a7efe810",
+    "source": "processed/nyiso_panel_manifest.json"
+   }
+  },
+  "processed_labels": {
+   "processed/nyiso_panel_manifest.json": "REAL DATA - NYISO MIS public files (WEST, N.Y.C. LBMP; NYCA load), EIA Henry Hub, NOAA GHCN-Daily"
+  },
+  "raw": {
+   "eia_gas_ice/hh_daily_2013-12_onward_parsed.csv": {
+    "downloaded_utc": null,
+    "file_mtime_utc": "2026-10-27T21:24:16Z",
+    "sha256": "fb0058ee53257f1f40d6d3bde985239d331f5a52f9b38aef52c56ba1bfe1f1c8",
+    "source_url": "https://www.eia.gov/dnav/ng/hist/rngwhhdD.htm (parsed from RNGWHHDd.xls)"
+   },
+   "noaa/ALB_USW00014735.csv": {
+    "downloaded_utc": "2026-10-27T21:42:29Z",
+    "sha256": "f6449b931726e52b0f5dce2109c6fdf8356bdc79bc19aa0300590d51a16e0b70",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "noaa/BUF_USW00014733.csv": {
+    "downloaded_utc": "2026-10-27T21:42:33Z",
+    "sha256": "58cd042dd92e22df15e47aee381b3cd2fa6674a52c140c54456580017cbaa6f3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "noaa/JFK_USW00094789.csv": {
+    "downloaded_utc": "2026-10-27T21:42:25Z",
+    "sha256": "cf05da9ea348bdff7dc00b68710ced058eda3ff422bab15dd65f32bca49e0509",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "noaa/LGA_USW00014732.csv": {
+    "downloaded_utc": "2026-10-27T21:42:22Z",
+    "sha256": "0e52bc778460886a36de261bc91f84650f81ea300714ad55b6cd552c6559e129",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "noaa/NYC_CentralPark_USW00094728.csv": {
+    "downloaded_utc": "2026-10-27T21:42:18Z",
+    "sha256": "dd0fd745ab08371e1f9275840ca4cfe7af9dc863b5b4187b28c739e042da804e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "noaa/SYR_USW00014771.csv": {
+    "downloaded_utc": "2026-10-27T21:42:37Z",
+    "sha256": "7d7c0d881fce063f1abd33ae787bd5ebc084ce46085f40f156d0189c3861ddb7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20140101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:53Z",
+    "sha256": "a484f01b9635e7f874595434ea646aced9360fa7f7dd9c8cdbf7351bad2896e0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:09Z",
+    "sha256": "e57ad2374c0f3ab6569c0bc33fb2736b7f73166d212026e0a7ccfa27f6db8644",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:12Z",
+    "sha256": "ec106a76f3329551d1c3dd217e6e1b1e81dbd9a49efee2e6c406d0ad89fd4f35",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:15Z",
+    "sha256": "f0e54441c4d50b46b170f416cee6a6a11bf33c1d09ed6b14bc276513d90aa0bd",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:18Z",
+    "sha256": "127846ffadefecd0794b561e27018c422c4dd0e0610df11263e2fd05005b1017",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:21Z",
+    "sha256": "78fcd03eaa77d9335fedecc5b514d422fd186ad24fe0f4ef5f867228a62053aa",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:24Z",
+    "sha256": "33eb284dd6730a23c8c96015ed1d11de1c96ebc82b59768985e00e87991fb1ac",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:27Z",
+    "sha256": "15e32aba8757e1a874413d4ad52d9b4e607d8802a1b36c3222a164f70d06a504",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:30Z",
+    "sha256": "13f8bdf66350bc88a4d70b57c04080745ae9eca93d2e9b02dadf0826f14864da",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20190901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:33Z",
+    "sha256": "7c5e87ef03d84d69c57fd276aed23ba72d936176ef99cecdc517ffc3037bdd6a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20191001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:36Z",
+    "sha256": "ee2ec0737ef49044f391f155e78d3b38dcc11a625c032838ee6ab8fd762bdf9d",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20191101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:39Z",
+    "sha256": "07e36c0652318938cc55951bca4adac88ae98722776999d89bb98b2cb9ca6845",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20191201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:42Z",
+    "sha256": "d150e1938b043ecd0ffe9e16e1e9d1e3ecd4cc31fdb3cd588aa87f57db824ef7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:45Z",
+    "sha256": "01d9e527ec10a5c730980f6376588f37f22acaa942c386745e031bc186a2538f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:48Z",
+    "sha256": "44610ec4b7163b118a667fea90ae14aa07927d2a334d90167830400bb01c9520",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:51Z",
+    "sha256": "ff50464721712295d33fea24346f38b552565c4beaa9099a24b1f8218a113576",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:54Z",
+    "sha256": "381f479773df1fc18fec06881eeba35db8a3ced96e1173371c72de876e146dc3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:57Z",
+    "sha256": "f43d9e623cfeb57bdbb4c598ad671bff56a78014e371ca3cc751f2aa7ad63f9a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:01Z",
+    "sha256": "2ef28ff2386f765f3f233a1931a469c08014ccb4bffda0998bba0fe15d241fed",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:04Z",
+    "sha256": "bb05d0113708785de81a3e54b686e4c913ebc53da18b1d18954ffd96999783e4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:07Z",
+    "sha256": "08fa5cdc1f69b08078a25e87f05d219d2acb7c0abd6a516903ca5e43684dae89",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20200901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:10Z",
+    "sha256": "01f36e9e419f6d87893b789b1ddb8c79f3f7b96fcb14832819be1cb66b185db4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20201001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:13Z",
+    "sha256": "c30055f13b15a4d9b3a614dab02303bf3016ae22deb11aec36c65ac67e501280",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20201101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:16Z",
+    "sha256": "e89d1e0949f515f464f9c6ef14bb80692728f003ef752316d100a2ddb78280f5",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20201201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:19Z",
+    "sha256": "a679f9fe6875d884f1fa4c90f13e294f65d6224db28be18513d8dd3ffdbd7461",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:22Z",
+    "sha256": "19f6b037be3fec7cc94219f589d83f0839829e717b2d3608559d354a182b3523",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:25Z",
+    "sha256": "5044ecaba427d22a10d92b23903a0b5d5c9d043c135d09bbd3ae388c973846ee",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:28Z",
+    "sha256": "4e8605433d14316cbb8edeb42cf1616ac07d4c2551eda94b0e955912feebd0cc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:31Z",
+    "sha256": "ac8972a7680a2004bc62a8b2579710cbf555da05b23113fca2d8195c9b85754a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:34Z",
+    "sha256": "a51b724973590b39af18b019c8ac59e67121ecb39ba637b8455880cf546737fa",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:37Z",
+    "sha256": "b6981da98f96c5281f43cd0de260f3359eac51364e7a9c996e2f0c80d02d9c52",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:40Z",
+    "sha256": "e7c3c22a770ff344acac44c07c5e436d11d9413625da47862f7707988e4575e1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:43Z",
+    "sha256": "d002dc47832db4cf04e8cbd2c9028ec57f8c935ea1b13a89cb6a6f9a4c2945bf",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20210901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:46Z",
+    "sha256": "6bab8d9042d3d18ae446dda6af085d70b2061737519f5ecfc97b9381252f38b7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20211001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:49Z",
+    "sha256": "7250d1e995aa2a2b491ad005c1e4f2decd20f7c2806029906766fe94c49b68a3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20211101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:52Z",
+    "sha256": "e2dc5751790a73e155343f930fc3a81f11b21604a2d9a50646fec7df807bca70",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20211201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:55Z",
+    "sha256": "e276060ddf7ca9b8f3463027362675cd20380add73760d39be1596ae4b0c9a07",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:58Z",
+    "sha256": "994afcbf488034e9889934975724369cab3ec3982100efb70334e1f6a16c695e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:01Z",
+    "sha256": "3b95d992c1ae5c7849f7ba240bcf3a96281a36cdfa2da087ce8c3236b991f254",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:04Z",
+    "sha256": "9bd57e5e7a7407ca4e35d696bfe9033fbf208a744ddbdff3d405a64322990011",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:07Z",
+    "sha256": "f5fe4dc14e5ddd66aedcae9be348c0995e66ca7153b3b9fb7069b565e81b5dcf",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:10Z",
+    "sha256": "4ad2a1d9a88ee98e165e6aade14314153abb998f9d91e7c9b79dd69b8f01cd42",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:13Z",
+    "sha256": "e658790e443fde77bdd47cd31e8c96af9f8f56c43fa94fed923b5e6309ec841a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:16Z",
+    "sha256": "0ecdfe1aff6470a67099a1849b21bbfa1e74060711820e80e2e8d79289261991",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:19Z",
+    "sha256": "34c9e54f7729c3edc97229af1afe492475e845a1aa358798d559e1edbbccbb89",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20220901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:22Z",
+    "sha256": "abac91473bdf08101900a820a4287102f5f5ed5b74fc72ab17723aa7b76442a3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20221001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:26Z",
+    "sha256": "8d9f2ad6f3a31f8a9bce754d267bae5fb24b9ad3152473c3520fa153237bc0f0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20221101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:29Z",
+    "sha256": "f1386ac45c4d682a1a0db32f554f601733c52bb125619ab986cc3b826ab1f0e1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20221201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:55Z",
+    "sha256": "752c7076703ac3a941142e06f71c887a5b8b44c148355d6ae1dca3896f15886e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:32Z",
+    "sha256": "256dc5020b719eb8d523b911e4220c35f7011b27a47f61dbcc2f3227f638fec4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:35Z",
+    "sha256": "00841a7cc2e5bf5d21e8641d160559f6255c9da4590c6d8bb11e58fd078f83ff",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:38Z",
+    "sha256": "a0b8b7d41e8f212c8638a302929853622246d1ec591a68695ec499bd5fec21d2",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:41Z",
+    "sha256": "8d07e0eb3c22491908ae6ec1cec1bda1bed3ab2e09a46286f440c00a77716aac",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:44Z",
+    "sha256": "7b0a757abe270af0bbc70c885808fb49602ca8002f574b1eb5d203010c398feb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:47Z",
+    "sha256": "087d48291f786a6ab180b873482be48f3b5114e5fcc438cfba71c41270af4f0a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:50Z",
+    "sha256": "ddb37100e1aa150662370c21e68d98d0eee7d883972344732194be4f1ef1c587",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:53Z",
+    "sha256": "60e47f35a0a4fef233e2dc2218c53a3748e8eb8557c3c1f21d7f4bfdf618c6ef",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20230901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:56Z",
+    "sha256": "ae840546607a691ba2826984970b9dd77446f5e703e6b2006ca7c238407631ed",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20231001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:59Z",
+    "sha256": "563c03fdacfbdde6e49d62434e9e8f7883ce2205aea75ed36455fcfb1a780e93",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20231101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:02Z",
+    "sha256": "51994eb34b5a04e014a97c5491ee410c8f319497629430c3d95e15b894a100c9",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20231201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:05Z",
+    "sha256": "7bd513814cfe7fc13d2dec34ad7338e36705b4122ff006cae9139a4c83abc389",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:08Z",
+    "sha256": "a8139873a8b1aff98b5ad17ed16bb5cf57e834de513e6c80484ab371099ff592",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:11Z",
+    "sha256": "1af2ad05722197e12d31fb422f4fcc6a2ed8e89f1b04ee313510d0cb5699fd82",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:12Z",
+    "sha256": "90276dc779225078ec5016c3f417fecb2562964f9340124d1d8ccf5f02417a9b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:13Z",
+    "sha256": "b86d2b81588084385234b2e634842d064811df6ea3c26d4c55533ef01b477e92",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:16Z",
+    "sha256": "f4aff95cc881ec92b4ce05a15dc6154ae29b7f4de189f25006422eac29cdfeed",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:19Z",
+    "sha256": "d99bd9bc45c1df487436f2ab86648cd31b046bf6c27eaa6aa542f1f41cb7b9db",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:22Z",
+    "sha256": "61fedf8d4904892213b231327bf87e52c871d921dbb1c047e1a588c17feca774",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:25Z",
+    "sha256": "1b3cd91e65f21a462f2a142c5703ad15ac473051b6fd9eee3218bd1a8a2bfef5",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20240901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:28Z",
+    "sha256": "1e224e649ad619979390898d2ef3ee0a1f293ff6f13a6ee98cf1b4aec2270096",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20241001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:31Z",
+    "sha256": "e4fd5eb16cbc105a6f69f9a7d670d4cf92c78a84560455164c21fe1411e7b37e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20241101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:32Z",
+    "sha256": "7d53095c957af801ea831e7aa80fb0244240689bdaf3308130daa47a91e884ba",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20241201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:35Z",
+    "sha256": "8ba7a8725872a4450a749c374aa0a64aa2a457fd3bbac922d0aa19d2886d488b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:57Z",
+    "sha256": "f77f56ccb24a2395ddf9bc967b5ab372380a1791448ba228d95cfe1a0a43e28e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:38Z",
+    "sha256": "b6fcf723f9159af401d0550cfa0fc288c5c6aed628e67df35ae9a2a0098c961c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:41Z",
+    "sha256": "5ae47488aa8ec2f57cc47e1392ceaba84c93173065ee9e00073744848383bb86",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:44Z",
+    "sha256": "e774bcfdf7980eed343f4746285732fb8eaf7bc6b93811559ff144aa38903ec6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:47Z",
+    "sha256": "1fa73bc79a59b3c75a847d2d8feb2f8155cf71287d9c8aeeae17f9484bb2f870",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:59Z",
+    "sha256": "9e190bea8c17ab5c6eaef1d013bf8b8c36b91eed1bf427d78cfbb16ce6cf10c2",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:50Z",
+    "sha256": "e76ec9ebb38365b03f8bc52077e9be683bffcf13ea93817ce1a39ba2e0de8cfb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:53Z",
+    "sha256": "501ef760e3c550ce61bfcbe9b5e7b83babc4841796a80f14f8b692c7461fbc0a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20250901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:56Z",
+    "sha256": "c9502fdf1c50f555d4f0c2a0748aed62c329646082eab636916181efebba5143",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20251001palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:59Z",
+    "sha256": "46a5aa0d767c7d47e6b0c5350aeb13e63d346ed08b267922259348ceee916b7e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20251101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:02Z",
+    "sha256": "ff495b34a7fc0e61d338e91668485db6e66e72659e35369e8e7498cb8d2d2958",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20251201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:05Z",
+    "sha256": "6642fcf115102053e9bcdb5b25fed6affcafc8aedf4aabdf4439e7a8f1ce9e51",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260101palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:08Z",
+    "sha256": "4c8c84b1dfb195213600c371c447d67af73b0af99a696882505f62679e0aed85",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260201palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:11Z",
+    "sha256": "b5ecb24ccb042628d1190969822c44a88e1c31e0eeed3beae7fdbdfa277b1316",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260301palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:14Z",
+    "sha256": "7aa25857d44d4b9875ae59faeb8815d87816391083c7f1aa3234630a7f78535c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260401palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:17Z",
+    "sha256": "9942e49811ab43431a714b87f1ca10798587f0477f26fe16147e916bc1bc0295",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260501palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:20Z",
+    "sha256": "14bc488159835280179e2a710939fd127a092a6c94fcd7428a16e898e47dc5d6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260601palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:23Z",
+    "sha256": "892a8457118240e7bfda34c13bfb2ad94e043f321b75ba63b7b6e7a0002b83cc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260701palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:27Z",
+    "sha256": "e5a9540c49b130efea07c974f4c09ef770547f5a5f1f1275888117ae73031d38",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260801palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:30Z",
+    "sha256": "9ffad01221eeb87791df1542ae8d985e43cfc7f3d17afe291af0ab96723cc58a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_load/20260901palIntegrated_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:33Z",
+    "sha256": "9c21656ace6e828040f79d657b461c0f349ff17c3187a9806689e2085a51b88e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20140101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:50Z",
+    "sha256": "02868557360d49a6a4b618357cbed333e67fd1742bd2daebce20e9cc6f1e74eb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20140101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:55Z",
+    "sha256": "f6ab708e35600041962da08278868ab4a45ce4203a10666c61b957b0fd611ef3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:08Z",
+    "sha256": "d57b325effd9016d9ef98e59585b463bd7e28c68bdaed72d2ac6b12f68086dc8",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:09Z",
+    "sha256": "4e9c84d3ab97857caebddbdaf5739c0ffbe9e092fb71a77ed1fd2f500cfe5a2c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:10Z",
+    "sha256": "1693fd5f58f6416ef204c8deff7d24c62bcf2629fdf8d676ce22e9bcc8ea12d3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:11Z",
+    "sha256": "6e871f294d7a02b32880d5a0d3a31cb2b79a037daf443f0bb12d9b78f9d24b68",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:13Z",
+    "sha256": "06e99154b5afba4e452e823b395ebf047658258646b433b6e14313add146bddc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:14Z",
+    "sha256": "0b20e4bf8a0b3a4a8bc783f11f46ca267100760bc9076bac6a1f6c7416a3aa19",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:16Z",
+    "sha256": "902262bc603a79246cf3805257f212d1a1186ee40926e425826831c74a043c34",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:17Z",
+    "sha256": "9e9318c880c96a64c9beea4c8171163621047f661187a911b3831385400306fe",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:19Z",
+    "sha256": "da7e513d609b631f92797af137f2457c84b7bb361a69305d042b56c3ac423363",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:21Z",
+    "sha256": "b9cf0738b21443facca1517b98f2121d15362da51f5c1396f56169e2b7cb76f6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:23Z",
+    "sha256": "840e2e1f8b36db6b6decb7fe373918d1e3d36c597bfb90a3a5ffe581cc8f574d",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:24Z",
+    "sha256": "8690027353e871d58455822b6b6cf3652ba33abb96f503860712d2f5c886feae",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:26Z",
+    "sha256": "e135f8c68bc41a9acf4bbf32b6e172ce6e4e6b82752250467c57167ce7cd9cd2",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:27Z",
+    "sha256": "c092bfbce76695252206220444e4338a02435a3adfc955082f9b1519dfc57efe",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:29Z",
+    "sha256": "f82b7cae96ca822586bffeacc276232b7d8f13d4248ef7f28b84fdbdae8780e8",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:30Z",
+    "sha256": "397bdcfada4cbfe034f8704057188a4dde081edad109d6bd68bf8dd5829f71cb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:32Z",
+    "sha256": "fd954a115352c3405a7186a86901029c6fa3e70d1506b77cff70864e69e5c96b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20190901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:33Z",
+    "sha256": "f2071bc250d813b169492a3e5a0719e016e8573f38319c3471a067a844d6b384",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:34Z",
+    "sha256": "70fac3c3d52a721d632391633450d9dffe75b6fd0a2b61addbf41d5db6e72d0a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:35Z",
+    "sha256": "864aaa1c7ccac409396041757f37a55e81b5451e2d62786c37cb8b7b8549f1b5",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:38Z",
+    "sha256": "dda5bc19c9e5ed796ffa2c13b3e871c970696b24ef7945d175c690b22901bead",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:39Z",
+    "sha256": "20af21534a52fa211c660a8f62db51d4fa12211426ba9b4802ea31d585de7b19",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:40Z",
+    "sha256": "a0344d24e7347c0b98851cc781d36fc2c10a9a13d162f777498ee7402533e99a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20191201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:41Z",
+    "sha256": "d96a9db804423f79c33910bcc8dea070bac08cedd1de08fb68fbf89a6202f1da",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:43Z",
+    "sha256": "9a4c63d823102ae0cb0f0dcbd5b0e9df128edcb2e9d218946e445a625e2b1970",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:44Z",
+    "sha256": "6ff29a05760286dfa6390fc55c6c91868b97666426cf44fd1a9967175f85ef55",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:47Z",
+    "sha256": "adb0c8779cae404e91cbaccbcaea73977944ef535239528395755f4b926820d7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:47Z",
+    "sha256": "fbac4485b51e9503bf2766bdff6b96e36e531deede4759aa71086be14cae680b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:50Z",
+    "sha256": "17dcf872e61aa26fee14c8638f601441ba2709d87167e65b49c977bf781d5d5e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:51Z",
+    "sha256": "378d7a714bc4252d73655d7d0d10fa4a580fef241c8f202e34decfdda5e51ca4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:52Z",
+    "sha256": "08f95e7b985575f107ed0e17cf0afef08a2ccefa8342bcfe8511278a93cbb1b1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:53Z",
+    "sha256": "860d4edd84f31b6f327e00a8b795086d0f3e19861af87097439902617a9f14b4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:56Z",
+    "sha256": "c6ccdfb14ba74d1974ecc3bcb43cb58fdec9a3952bb49561c09f6bba8c5c805d",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:56Z",
+    "sha256": "68e6a0d1e2c2ad6e4d64059262d055aa066cfe3bed5c27753c692eb241205ad2",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:12:58Z",
+    "sha256": "b4436a4364ebacb0eec89dede42a8d500724a6727cb95cc821d851d24db3bfce",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:01Z",
+    "sha256": "ba6d940063b8613f8598c900df90404d27894d0ef5ea3df098600b5be23c4d39",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:02Z",
+    "sha256": "c6db043a603e40765b467e5c88273a646a5c051cf9a3626ff1034e8e56c667bc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:03Z",
+    "sha256": "dceef451a3359942200153e679c693949ef0d74eece0cf89df6fdc50a085c074",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:06Z",
+    "sha256": "2bb3b2472136f201c7ebf8a0a6dad098e4cf89c360b8bc9e481f52c7591cc2d6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:07Z",
+    "sha256": "69e7ee70470208132c37e25dc59990bf92d9d42d1610db1446091e9496e34874",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:09Z",
+    "sha256": "4eea480511e743e6a279d11eda7461e4c6f32c4bc1e9f34c7b0e25fd6aefc8bb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20200901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:09Z",
+    "sha256": "6ac3e614a25c08a0f8ebe05df1621b4a8031486f4c1785e7b256f5b30137015c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:11Z",
+    "sha256": "0b975e774a0d379c107dd80c02364e31a73e4707a3353081da56433f177227fd",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:12Z",
+    "sha256": "c2dc456189123acafbdddc3c3e277765e6768939d8b001521637f25a2eee7744",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:14Z",
+    "sha256": "554f31fe449652faf9bdf39283723ac2118900dcc1cb42fa6986adca373c8add",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:15Z",
+    "sha256": "15652f93459f88d74acf68231149967fd1a4386e8d6fe868d1ba50439f5661b4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:17Z",
+    "sha256": "dba13be2723688fbe8397b40eca710dfbbe930eb354b37d8011c6a5e29cbe74c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20201201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:18Z",
+    "sha256": "a4bee9e5aa710f046c192461bddb5a52ea7f6cbd8c9b7de8447ff6569bd2217a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:20Z",
+    "sha256": "68aaa865d02e737442cd2fbe6b482c017fed0d7d1eb3e13ea6e5d1ad4bb89b32",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:21Z",
+    "sha256": "adb48e8af5cd6db0db8472fd0616a173fe1ad88d6709388948195229e914810c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:23Z",
+    "sha256": "cb3ed95ca439692b8b3a9c89945ef87c3455c0d0a19be5d7d81d7d637647ad53",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:24Z",
+    "sha256": "cc2819528b5b44825feb7e6a1fe807ab72a5c0176c0a1ef6f09607fc4b7eae4f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:26Z",
+    "sha256": "633b5a86f1435951088840836cf49a81dc1b111525a5b3223234b5b7f2610398",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:27Z",
+    "sha256": "6ca35d71fb26f84611fb069af771903024eadb0d9b8f292b6d2f6c624c9e4939",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:29Z",
+    "sha256": "59c7439ca96fa4da82a4ebf3bd1b17b0770bd7b11a455333f08487da984d0a1b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:30Z",
+    "sha256": "3ce54546acb4ce1013ea3f08e761aa11082a466529b6f5c586e5bbe9093be8b1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:32Z",
+    "sha256": "80e43c385b780b619d8104d2e1ee74c271e0ef131142a984c025f2b33b23f225",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:33Z",
+    "sha256": "5626fe74286b24893fc9cbb95e42786c46e9d3ebbc9634d1c1755d390db2a321",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:35Z",
+    "sha256": "1f3fc7658309c6a2b5e7db0ac7e3b534a7ec3deb83b4d8b400d077d549f5b903",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:36Z",
+    "sha256": "fa030bd15fbcd2d488a246174f7595b41af0fa9e9b79dd764f450de8823779b7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:38Z",
+    "sha256": "7aa294c9f540f4de6c42d973f3de834f9b9da63fb403d99b319dfba6bc8d6514",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:39Z",
+    "sha256": "eeaadca99a090be3e108a3335a64a817e8298e735c664d9b15543f435ab89f67",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:41Z",
+    "sha256": "c2055329915e2d39534b1767c818100386adadf4f177a9a613abc128fb9fa8e0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:42Z",
+    "sha256": "8b9bcc4c9d9a138d97532b152d7f17b61ac91ddb8acbc4ecdc70558b9d5a0495",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:44Z",
+    "sha256": "7ba9210fe841fa7dfecb5c8cdf33fe990cddbc05626f1b8f669cd584274c5cac",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20210901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:45Z",
+    "sha256": "85300f1fc5ecb12357459f266face956fa44968aaa38896ac3f0a0676120f769",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:47Z",
+    "sha256": "734e45f9e778d21867d3bc3495b91686a59b2dc66b76f820f4e4527e67944fc3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:48Z",
+    "sha256": "bd971007d1daa46ea4c2d3b90abd9402543beb8a1c1a288c74f2591061542a8b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:50Z",
+    "sha256": "3cecc050185cd63623d7829a5713fd4904a7159fbc618ceb892c389899c83ace",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:52Z",
+    "sha256": "4993a8ed436469c0ca98a6b8fe323c21643b8ace03590f071215b3995108a3d4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:53Z",
+    "sha256": "f256b2f391fb14df802c4fb20160ef9819919a2b44c8ab7ccba93321f4d13648",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20211201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:54Z",
+    "sha256": "c13c98ceb6b70c7f3e35f64911cf9b2ca66f936c459c972838df75521b04808e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:56Z",
+    "sha256": "44f2a2b085c10c57a8f547752267261853cad055ed642be510037ac19233d0c1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:57Z",
+    "sha256": "4a07f9c3094f89402b1036736e9d466d9ad10b992e4356f1a9a7e1d395115fc6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:13:59Z",
+    "sha256": "75adbdd4497b7c6aa5db039e5030cbcf47a1885827f18b5945055e78902754ff",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:00Z",
+    "sha256": "fa377ce25104a200b533eecdad27f89824ead53370a314378a1c30263eef197c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:02Z",
+    "sha256": "e2ea182b05a34f0d831306ed011dc7a299d9de803111357635140b81561936b5",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:03Z",
+    "sha256": "86a8b995c00cf7062b5cf5395a6363f651a7afdbd59c9469bbe4e1701c0a3d57",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:05Z",
+    "sha256": "4e746dd2370ed1f85076f17be38ec26d9eb3400be729918422d60fad8e31a807",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:06Z",
+    "sha256": "84dd7bd6d6742464ddd28104410ead6b5937dba77489f3da9f7940b7959f0d88",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:08Z",
+    "sha256": "2bdc9382ca3ca6246bc651747caea2bf9dc4885fb6263812944b6760e34cf5be",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:10Z",
+    "sha256": "f6a8e4212385226b4eb66fbf989c75aa2f4699a9c56e74b06d17b8e86676a3eb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:11Z",
+    "sha256": "35744f4b8f1fb67d97c6187883104ebc13d81f8812c9cb9352093ba2b0be4303",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:12Z",
+    "sha256": "cf60f85c6b0f4b1cda07af136c1aecf3e35ae05104eff2ffd36b9effe0cc0f16",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:14Z",
+    "sha256": "de7b7b30593462b460428f2d227c93bee38889e0743bd962bd142b03552d5b2c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:15Z",
+    "sha256": "14b6bd41f7f5010fd1bd7742b0ead138b6dd40deab364805426b9fb620bea30a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:17Z",
+    "sha256": "892a840a014eb5fba46d1503101a10320e5b86e98eac08727e5710272047e8ad",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:18Z",
+    "sha256": "7d9b5270edb70ac9d9bd7cda63407b1050cdfb9acbe391df74cee9419cbd0df7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:20Z",
+    "sha256": "83e57bfb31b2ba447c6d6cbf3ca1a77e6bdc3c6d8735257af2d8bdbd233bab41",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20220901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:21Z",
+    "sha256": "317695f896fc0bd3334e144cc626d59e7c3008cd734adcdbefc01b07cb755156",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:23Z",
+    "sha256": "c1a22a783414c44537566d474e68244578f80843a51a9d700a442b19a6d5cab7",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:25Z",
+    "sha256": "8c698a8530f408e0ef0579a283935b04e6e044360362f056de13a803ff172d78",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:27Z",
+    "sha256": "2e782246d8c28e932d8ee1b8c4b40157a194750a24c6361d7668bdbf265698d6",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:28Z",
+    "sha256": "23a241aa651e1a1a06fbb4f901f9dbd0dfe810f115a90d052412c64ec04ad457",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:39:57Z",
+    "sha256": "0070b07cb5e4b62dbcd811205e424ddf54965851c35fca7a61282cf233861a6a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20221201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:02Z",
+    "sha256": "25c1615e7f0a9cc28eedc4c49cd62595e8869027e93ff0cb1fb789cebb54d966",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:30Z",
+    "sha256": "b931638c85dd255645fef6bcd61ec24ab0f4b5a04655617ebd6ad7ebebae8c8a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:31Z",
+    "sha256": "4e49900909119e4b84e8130be70df794a0fd30e7f529be3749f0e45be2fe6419",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:33Z",
+    "sha256": "1cc0df23b835254f01f8044e0fe31689642cb32382b0b7da8ed51565548df2e4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:34Z",
+    "sha256": "e8cb63633b792c9440d21a0ef2893abbb9881b6d497260847ef1362490733710",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:36Z",
+    "sha256": "b7711f072003968797e40c7baf121a051b69091d4371d9991f2980c8de5c6d4f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:37Z",
+    "sha256": "d7defda2dfe0eb2f42f67c54216bbb920111273fb88c85e33ce5b60c3fe46358",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:39Z",
+    "sha256": "d0bfd81f0c11904fe44fbe63908abe8a86eeca706e64d2abafa8ae6d5f020121",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:40Z",
+    "sha256": "004484cfe700039f8f02720ac256123ca391b0c64283b0a34bb91af1b551539e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:42Z",
+    "sha256": "bcd1def3d2ec5c2480d55ecc362db1ada0d0ed840c84cf36f01d240632d9ab9c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:43Z",
+    "sha256": "254071545943a06f0ad20b54ba633836246fa7a07e1747d61f17f289dbbedef1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:45Z",
+    "sha256": "2041a2412147a672fea267e963b7373691c7b560c6a6ea856d46874bbd677cb3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:46Z",
+    "sha256": "059a8f3c397585a04c18f970cf4da9fee7378fb6fa04fd3aff83345a401f598c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:48Z",
+    "sha256": "e59a33fff23d1d2a810da24cdb42fff4435c0d0c23cfef71275c71800ed6bce0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:49Z",
+    "sha256": "c0c3a43aa484660d975195fe278351a1c59f60dd425f5c1557e97e39740017f3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:51Z",
+    "sha256": "dc9efaf3500e51a5f0ec9e1235bf76b6e9e9d1a74bece4bdbabdf98a60504088",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:52Z",
+    "sha256": "be480a638494a2c93dae40f204b24099ed1475ef01a259f669bf2803f8d14e2b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:54Z",
+    "sha256": "5324b4b6aa295dcf91d61f25deec26305e2df233d292edbba1dc110af664b5d3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20230901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:55Z",
+    "sha256": "1d606e70dbca11f48048c9d008f69e939dcf2a5b5089a6ead497e330ed477296",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:57Z",
+    "sha256": "f6006f00a58aa9bfe3296679132645684987d155eaa98bf7bb2f164c148394ab",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:14:58Z",
+    "sha256": "4ec4a9cbd9d4d01e0fa91e8a1c5b37abd706005e02d1001b4fc13c2552ff0d9d",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:00Z",
+    "sha256": "e895ec753767bef46dea5fa2f0fcf15993a54f306661ddd07482b41506423147",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:01Z",
+    "sha256": "f6f219702cd3b852084b5d7266268d7fd026b691d1538415f0b2578c77293af2",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:03Z",
+    "sha256": "115fcf5783856124126c5ffbc7a5daa4c88f50caab7fbb64d7750cb0a4be5709",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20231201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:04Z",
+    "sha256": "a40482c9fa8c9a6b316e5ea2ac8d95a97d9cc1c9a14c8c02816bad22dbaa5ef1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:06Z",
+    "sha256": "bdc73a2614787e93e3cea8cd17a1eb032dc862ec7f31d59075caba3e0a945f72",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:07Z",
+    "sha256": "91a3eae80a1643b915caaf76102585429ac5670ed7c4f3a668e923109cd90569",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:09Z",
+    "sha256": "64d7adf7f10e02b199a27ad213c00e512f8af5269eb2d600a66a40922e541c5e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:10Z",
+    "sha256": "788fc7e17e72f8c0785e4594f87874fc4b79cf05737e6a2077c3442d45f8bf7f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:41:41Z",
+    "sha256": "7bcf8b74308aff9bd5766ac982ea174d46c1f412f7b5c7f44d9305b7bea2d3bc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:41:46Z",
+    "sha256": "0bccbc8f2bb4095f351e4454b630a2fd99650d17aee83e938ef4d54eb5830aa0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:15Z",
+    "sha256": "4246824880f5bcb6663397ac00117e177a37a10f4236f0e735596a06e5d0116c",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:20Z",
+    "sha256": "8e1630cc1f889155e08c251980a8b194b100d9fe8cbc08e8affa5b9ceb6cc68a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:14Z",
+    "sha256": "49e66b29fb70f666d4ebc2e5edb3129713a00e77728da12157bdaca6c6aeccd3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:15Z",
+    "sha256": "bd31a2027442ac1b8c4da5b51a2f2df82391a2ac693dd30acc0d43d57c1e9a38",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:17Z",
+    "sha256": "20099071bae810cc165e35a328f618419c01fdfb731a3b409e776f12210d9428",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:18Z",
+    "sha256": "36b5190f8a1b041d59194b248cb6191a55edf53d9662500ea9b8ae5fc5578a65",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:20Z",
+    "sha256": "8973ca7036bac839097acda4f57880f75c48e2cc7ca7e3c140a451b40ccc3518",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:21Z",
+    "sha256": "76ce1f8e22dc52ccccb857d76d6c7a9feceb34cf6bbd7cea3207389a1e7a03c5",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:23Z",
+    "sha256": "58b33393fbc14539db2761c595501fbef66c1ac8334011773dde58c1dffda4bc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:24Z",
+    "sha256": "73c6ef984a4033e29ee75b3669f2b96449ee366cc5f6ccc3fd670a90eabb6ecf",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:26Z",
+    "sha256": "5949207161d04c128bd076caae163a0db79625a3f8fc82d790a5b731acca38e1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20240901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:27Z",
+    "sha256": "898b9a815cb4c42f232a7aefa5fd0703e54714089c1e535ca7d73b732df13d46",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:29Z",
+    "sha256": "fb29723d27228b1e91b1d0ffc11f3592d45e7eb39966affb32da03b365244f95",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:30Z",
+    "sha256": "f0d95fc654f97f0f5136257b2faf95b60e9088f50e83dbb44104d3604f76ea5a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:41:48Z",
+    "sha256": "fc0e247c42dd4cf089837480248a189ce2eada23c33c010881d065b5f4853c62",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:41:52Z",
+    "sha256": "c40296fa13f7e73fcc2ee460310cec1906fa17082932af35e8568961078dc095",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:33Z",
+    "sha256": "232b2b61d62c4272e94180066c344d6dd40e2473373876d8ff4ca889210aeac4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20241201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:34Z",
+    "sha256": "f6d832e95510c84c23e5d9e142f3d16b5dcd49080d34fecf4509eb7350875cc8",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:03Z",
+    "sha256": "dd0de661a2eb63ee43c9e9ffa9cb4e73409e345b5751b5e5eb39e1f15897a1ca",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:08Z",
+    "sha256": "a0c492ea405efbb618449db09561e8826b7ebf5acbc58d3437607888a1fdb2a8",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:36Z",
+    "sha256": "52e0e2e4e69cbe6128886406cc0c4413f0c573453d0ad3afaa13e71ab493131a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:37Z",
+    "sha256": "a6415364271e5da90f812a857c71cf58df3b4fb535f04e790fcf0444cd5dcd08",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:39Z",
+    "sha256": "b9a2c9e74f2916c16919ba3b2d880667c02b017b085b5813dbdeb1c556222044",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:40Z",
+    "sha256": "b8210104ff7bd643453c3761fb2ea612c622aeada309fda7212d38173c529af3",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:42Z",
+    "sha256": "f8d7d67d364f9eefd306d4b509d8ea3a0e68b95ea926fb779ef592304ac810bc",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:43Z",
+    "sha256": "a646713d4dbed33dbc641d83eaa17b1588eed5941a1c8f8dcc26f2a49a33d7de",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:45Z",
+    "sha256": "9cb2e545d4219947619ef68813b84a25bd48e7cb51fafe7b4a9769b46a4791ff",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:46Z",
+    "sha256": "458f027adf6ccddd6ba3737d6138eec1fff360db76000d907a84c7e84a8fb464",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:09Z",
+    "sha256": "d61ac54ab24e2ab72bb2261243febf9d1ced25d19dd5965500333eef9b042b13",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-27T21:40:13Z",
+    "sha256": "ec8bdddd4e27bd721d394ac7adf95bc95c73fe8fa4db9bbe8de9dfeeacaa2959",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:48Z",
+    "sha256": "7d1ab5b53bbf60fda665e291411aacd5eb69cdbe92353ffb6475cf0d75eff8fe",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:49Z",
+    "sha256": "9380e3f4a488eddeeb66d5144d0026418d0eabceba64688753c6588e27eaf783",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:51Z",
+    "sha256": "0428dcfeeb1507c54a894ad3296a1dce7eb646c211444809e27479fc1082e337",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:52Z",
+    "sha256": "fcfeb75d46e3f44bc98b2ba5b95c27019fcb2e3de1fa1f6bb7d482dd40bf6c91",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:54Z",
+    "sha256": "5fcaf4eccb54522abae69b9e21d53cefa6e04d5fd81e1e9d974a3555017862d8",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20250901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:55Z",
+    "sha256": "97b8a75cc6ec08f3255eba510f21784195baf4dbdce3b0bf57408ce1b4637141",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251001damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:57Z",
+    "sha256": "d328abff79d49ddf0300b31102a54ac8188e387f28423b9add78aadb08db9cde",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251001rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:15:58Z",
+    "sha256": "3292259b11a62a13bc4243ae72ee2b08122ffedf3c8611432fa16d0891b7d6d1",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:00Z",
+    "sha256": "a7761c608e37da08982b9514929726318f46faf3ec4920933dabbb9476ce8698",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:01Z",
+    "sha256": "126b127d37da87a81312750dca2c8eb8815ea844383006f9abccee48f4dcdec9",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:03Z",
+    "sha256": "c4ea75c17f000ffa0a03196ebc7ed83cb3870c2b0c6e82c749ade312902a9cb9",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20251201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:04Z",
+    "sha256": "53e3dde7e2cfce54d6363b180e620c408be9016ec423d69ba030d73771daecb0",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260101damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:06Z",
+    "sha256": "c013ec7661a85cd5de24ebe60934946db62bbb7f9a664067a2b3baf004278d15",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260101rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:07Z",
+    "sha256": "a50da94b514dc5988cc777b3d7f75481eeb931e8d7429c6d467c4581b4e69dbb",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260201damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:09Z",
+    "sha256": "989be68d48e8c4c3ab29f2e34c29e7d9d76759ca268d236c9bc3010d34a061ca",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260201rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:10Z",
+    "sha256": "1cdb7cf4bb199e372000fe754182869827c22644a377d2859a69492261d8f9de",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260301damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:12Z",
+    "sha256": "3eecf4d4114cc2d8d511397666c2df266b310ef4533861b9b4b6c92cf3bec690",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260301rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:13Z",
+    "sha256": "bff6b16463a51dc06297c186763a0a70e1acc5d5345df20170bc58f1ebb00b0e",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260401damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:16Z",
+    "sha256": "ec575762fe2ba6e88e3e8d412847e11bbf2ef8feaba0f13318d7f1eed42efc2a",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260401rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:16Z",
+    "sha256": "116ab5808247a05b5fc2833b2ca8f7ac887b018b4037c1090411b5ce0a442e28",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260501damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:18Z",
+    "sha256": "802a40ce54d9cc90aba440c042d0be5f0def6fc2e58e76cf6fb6e5b5c4d65fe4",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260501rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:20Z",
+    "sha256": "e3752d8514c22e4b1911ac3662c381a0599dc55c10bf4afb13cb0c18d7508301",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260601damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:22Z",
+    "sha256": "fe5f450e654019d1e8b0da2ebeaf79130a36d541bc61f9f1f3bc25552e4c4d57",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260601rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:22Z",
+    "sha256": "c93c603700723c1c02ce7b3c1c064859d887c4a59850547ceffac4b8391a9773",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260701damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:24Z",
+    "sha256": "2bc83c5abad4359df0bb2b7890876fe973d84817f88bf94e56dffe53d995f97b",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260701rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:25Z",
+    "sha256": "79bba3681d879835d4f9f0768dd85552b1d843fb4d14f007b245656e4c3a383f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260801damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:28Z",
+    "sha256": "b83c9713b8950ea9c1193668bfdfdaa0890499bf473b52caebf14a7caf5df450",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260801rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:29Z",
+    "sha256": "4c456a2d6d4eb361a78b8855070ce27c3876cc4e2f7e1a2fbed7596496fb9d2f",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260901damlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:31Z",
+    "sha256": "6150565fe3d915d64c9746fcc652bb375525a0aeb8cc6fb7cc5298bde1c5cd65",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   },
+   "nyiso_prices/20260901rtlbmp_zone_csv.zip": {
+    "downloaded_utc": "2026-10-28T08:16:32Z",
+    "sha256": "cdefc0617e076246c598bef75132f71994b1f1464527af5c9ac4b9960a162b69",
+    "source": "raw/nyiso_prices/MANIFEST.json"
+   }
+  }
+ },
+ "environment": {
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.14.4"
+ },
+ "extra": {
+  "budget": 144,
+  "dry_run": false,
+  "engine_calls": {
+   "claude": 36,
+   "cond_gaussian": 144,
+   "optimizer": 144,
+   "random": 144
+  },
+  "fake_client": false,
+  "fallback_book": false,
+  "fit_window": [
+   "2019-01-01",
+   "2025-12-31"
+  ],
+  "outputs_sha256": {
+   "comparison": "e5fd8dbd55447672fdf7d32b92bc161b7e3c93b58472c1b7cc9622a135729687",
+   "dispersion": "2bc42262e70d87c956a9be6c785ce2db70546f01b5b64dfce3358514d9b6d3dd",
+   "gate": "efc127ec19d20b9c9d89d6bd73efb8257807d5da9ef38379ca25e4a8a6731865",
+   "notice": "19eed40de54cc460ce3c78717701e2148438cccef1e086a23436f9321395c37a",
+   "scenarios": "666bda39b95212d0816cd1d9fb3fab7820e29f2921879db392de8c19075700fe",
+   "sensitivity": "bb9382780228e792ad557169e735171f088b5254d71f2f8cbfeeaa0bea0a8232",
+   "stated_vs_implied": "496dde520a254f5a063a32f429315b8521997981d2bfb0c5e3ecf86f15093918",
+   "waterfall": "833b485370984ec464d6cf4282ab9977004c7601e9b913d48fd21bc4c83ff0b7"
+  },
+  "panel_range": [
+   "2019-01-01",
+   "2026-09-30"
+  ],
+  "repeats": 5
+ },
+ "label": "LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",
+ "market": {
+  "cap_is_assumption": true,
+  "energy_cap_usd": 5000.0,
+  "name": "NYISO",
+  "pocket_zone": "N.Y.C.",
+  "reference_zone": "WEST"
+ },
+ "model": {
+  "id": "claude-haiku-5-5",
+  "seed": 0,
+  "temperature": null
+ },
+ "package": {
+  "name": "revstress",
+  "version": "0.1.0+src.be3caf737acb"
+ },
+ "prompt": {
+  "sha256": "ba628978020cfc64b3a7264f90f999ce865d4027c245a2ffa9745b2733422bdb",
+  "version": "v3"
+ },
+ "run": "live_full"
+}

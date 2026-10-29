@@ -1,0 +1,4 @@
+label,run,kind,rule,count,rate,penalty_sum,n_scenarios
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep0,overall,rejected,0,0,,36
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep0,soft,driver_class_not_overused,24,0.666667,24,36
+"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",claude_rep0,soft,q_not_too_small,7,0.194444,7,36

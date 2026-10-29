@@ -1,0 +1,21 @@
+LIVE CLAUDE run: up to 48 calls, model claude-haiku-5-5. Ctrl-C to stop.
+LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30
+seed=2 budget=144 repeats=1 fallback_book=False loss_target_usd=5,000,000 dry_run=False live=True
+agent (repeat 0): calls=14 accepted=42 rejected=0 loop_breaches=9
+engine calls per arm (repeat 0): {'claude': 42, 'random': 144, 'optimizer': 144, 'cond_gaussian': 144}
+               n_breaches_mean  n_breaches_sd  median_q_mean  median_d2_mean  driver_coverage_mean  channel_coverage_mean  rule_pass_share_mean  coherence_mean  engine_calls
+arm                                                                                                                                                                          
+claude                   9.000            NaN          0.016         152.033                 0.429                  0.167                 0.476           0.976            42
+random                   0.000            NaN            NaN             NaN                 0.000                  0.000                 0.549             NaN           144
+optimizer               15.000            NaN          0.039          93.153                 0.143                  0.167                 0.507           0.923           144
+cond_gaussian            4.000            NaN          0.031         101.473                 0.143                  0.167                 0.917           0.923           144
+gate (claude, repeat 0): rejected 0 of 42 (0.0%); hard rules fired: none
+wrote scenarios: outputs\live_haiku_s2\scenarios.jsonl
+wrote comparison: outputs\live_haiku_s2\comparison_table.csv
+wrote dispersion: outputs\live_haiku_s2\repeat_dispersion.csv
+wrote gate: outputs\live_haiku_s2\gate_rejection.csv
+wrote stated_vs_implied: outputs\live_haiku_s2\stated_vs_implied.csv
+wrote sensitivity: outputs\live_haiku_s2\sensitivity.csv
+wrote waterfall: outputs\live_haiku_s2\pnl_waterfall.png
+wrote notice: outputs\live_haiku_s2\NOTICE.txt
+wrote manifest: outputs\live_haiku_s2\manifest.json

@@ -1,0 +1,20 @@
+# secrets
+.env
+*.env
+student key.txt
+# raw third-party data stays local (aggregates only are published)
+data/raw/
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+# bulky or scratch run artefacts
+outputs/**/live_cache/
+outputs/**/cache*/
+outputs/live_explore*/
+outputs/live_smoke*/
+outputs/*.log
+outputs/synthetic*
+outputs/nyiso_demo_dry_run/
+outputs/dry_run/
+outputs/offline_daily_*/

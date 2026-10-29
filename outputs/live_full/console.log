@@ -1,0 +1,21 @@
+LIVE CLAUDE run: up to 240 calls, model claude-haiku-5-5. Ctrl-C to stop.
+LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30
+seed=0 budget=144 repeats=5 fallback_book=False loss_target_usd=5,000,000 dry_run=False live=True
+agent (repeat 0): calls=13 accepted=36 rejected=0 loop_breaches=6
+engine calls per arm (repeat 0): {'claude': 36, 'random': 144, 'optimizer': 144, 'cond_gaussian': 144}
+               n_breaches_mean  n_breaches_sd  median_q_mean  median_d2_mean  driver_coverage_mean  channel_coverage_mean  rule_pass_share_mean  coherence_mean  engine_calls
+arm                                                                                                                                                                          
+claude                   3.600          2.302          0.018         144.615                 0.286                  0.167                 0.333           0.906            36
+random                   0.000          0.000            NaN             NaN                 0.000                  0.000                 0.554             NaN           144
+optimizer               15.400          2.881          0.041          93.248                 0.229                  0.167                 0.540           0.923           144
+cond_gaussian            4.400          0.894          0.026         105.103                 0.143                  0.167                 0.908           0.920           144
+gate (claude, repeat 0): rejected 0 of 36 (0.0%); hard rules fired: none
+wrote scenarios: outputs\live_full\scenarios.jsonl
+wrote comparison: outputs\live_full\comparison_table.csv
+wrote dispersion: outputs\live_full\repeat_dispersion.csv
+wrote gate: outputs\live_full\gate_rejection.csv
+wrote stated_vs_implied: outputs\live_full\stated_vs_implied.csv
+wrote sensitivity: outputs\live_full\sensitivity.csv
+wrote waterfall: outputs\live_full\pnl_waterfall.png
+wrote notice: outputs\live_full\NOTICE.txt
+wrote manifest: outputs\live_full\manifest.json

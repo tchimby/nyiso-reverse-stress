@@ -1,0 +1,2 @@
+prompt_version,label,n,n_stated,n_scored,abs_err_mean,abs_err_median,abs_err_p90,rel_abs_median,rel_abs_p90,rel_err_median,share_within_20pct
+v3,"LIVE CLAUDE | REAL DATA - NYISO (reference WEST, pocket N.Y.C.), fit window 2019-01-01 to 2025-12-31, panel 2019-01-01 to 2026-09-30",54,54,53,880455,379769,2.04655e+06,0.0674794,0.471244,0.00987237,0.792453
