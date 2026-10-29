@@ -62,6 +62,23 @@ Claude averaged 7.6 breaches per repeat (10, 6, 9, 9, 4) but the single full run
 ## Honest reading
 Claude has no edge on D^2 nor on raw breach count; its per-call yield is higher but it used fewer calls, so budgets are not equal. Any claimed edge rests on driver coverage and coherence, the latter ungraded. Multi-channel coverage is a negative result: 0 of 432 candidate books admissible under the pre-declared rule v2; worst historical 30-day loss is $3.22M.
 
+## Factors: what they are and how they relate (outputs/factors, scripts/factor_report.py)
+The plausibility score uses five daily factors: g (log Henry Hub), l (log peak load versus its seasonal normal), s (residual of the log WEST on-peak price after gas, load, season harmonics and load x season), c (N.Y.C. minus WEST on-peak spread, $/MWh) and d (log real-time over day-ahead at WEST). Means and covariances are estimated per season (winter 632, summer 644, shoulder 1,281 days, 2019-2025).
+
+Correlations of deviations from the season mean (figure: outputs/factors/corr_by_season.png):
+| Pair | Winter | Summer | Shoulder | Reading |
+|---|---|---|---|---|
+| c-l | 0.42 | 0.19 | 0.10 | Cold raises load and the city spread together, only in winter: the mechanism behind the winter N.Y.C.-WEST scenarios |
+| g-c | 0.38 | 0.30 | 0.42 | Gas and the spread move together |
+| s-d | 0.58 | 0.71 | 0.68 | A price above its fundamentals goes with real time above day-ahead |
+| s-c | 0.18 | -0.03 | -0.48 | Sign flips with the season |
+
+Principal components of the five standardized factors: 34.6%, 28.2%, 17.9%, 12.7%, 6.6% (cumulative 34.6%, 62.8%, 80.7%, 93.4%). The five factors are not nearly one-dimensional: four components are needed for 93%. The earlier plan statement that a few components explain more than 85% of the variance referred to the price block and is not supported for this factor set; the covariance is therefore estimated on all five factors and not on a reduced set.
+
+Most extreme days by D^2 are outside winter (outputs/factors/worst_d2_days.csv): 29 Mar 2022 (D^2 356), 20 and 21 Nov 2022 (343 and 266), 31 May 2022 (154), 29 Apr 2021 (149), all in the shoulder season. The tail of the fitted history is therefore a gas and price-residual story in 2022, not the cold events the scenarios are about.
+
+Daily factor model (walk-forward R^2, scripts/daily_factor_model.py): see the table in the daily model section; persistence is the strongest daily factor; wind, nuclear and hydro add almost nothing; solar is not in the NYISO fuel mix.
+
 ## Limits
 - NYISO terms (checked online 2026-10-28, nyiso.com/legal-notice): the only legal page linked from the site footer; no terms-of-use or data policy page exists (the /terms-of-use URL returns 404). It grants no license or ownership in site content, prohibits stand-alone reuse of images and video, requires written permission for the NYISO name and logo, disclaims accuracy, and says nothing specific about data, derivative use, attribution or automated access. No explicit permission or prohibition for market-data analysis; this project cites NYISO as source, uses the data for coursework, keeps raw files local and publishes aggregates only. Not legal advice; ask the instructor if redistribution is intended.
 - Second rater: no human grader. Two LLM raters (Sonnet 5.5 and Opus 5.5, blind, same 18 Haiku scenarios) agree: causal_chain 89% (kappa 0.68), shocks_explained 83% (0.67), duration 100% (1.00), analogue 94% (0.89), no_contradiction 72% (0.47, weakest). Opus is the stricter judge. These are LLM raters, not the pre-registered human second rater, which stays [PENDING].

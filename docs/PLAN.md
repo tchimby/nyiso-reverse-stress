@@ -66,7 +66,7 @@ Net exposure: long system price, long N.Y.C. congestion, short DA-RT, long gas-l
 
 **Scope cuts (solo):** daily on/off-peak averages only; one price pair; gas = Henry Hub + stated basis; no NYISO forecast as a factor except the day-ahead load forecast miss as a shock-size reference (section 6).
 
-**Factors** (explicit, not PCA; PCA only as a diagnostic that they explain over 85% of variance): x = [g, l, T, s, c, d]
+**Factors** (explicit, not PCA; PCA only as a diagnostic; measured 2026-10-29: four components are needed for 93% of the variance of the five core factors, so the over-85% target is not met (outputs/factors/pca_shares.csv)): x = [g, l, T, s, c, d]
 - g = log Henry Hub; l = log(daily peak NYCA load / seasonal normal); T = degree days (Central Park); s = log WEST on-peak residual after gas and load; c = (N.Y.C. - WEST) on-peak spread in dollars; d = log(RT_on / DA_on) at WEST. Real-time prices go negative in places, so check the log for d; fall back to a dollar gap if needed.
 - Price model: log P_W = a_season + b1 g + b2 l + b3 l^2 + e (squared term for the convex heat-rate response).
 
