@@ -4,7 +4,7 @@ Course project, IEOR 4723 (AI-Augmented Investment Management), solo. It answers
 
 Claude proposes coherent stress scenarios as typed shock vectors (no price forecasts). A factor-based engine computes the P&L by position and channel, and plausibility is checked against 2019-2025 history. The deliverable is a **ranked set of scenarios** with narrative, shock vector, P&L decomposition and an audit log, compared with random search, an optimizer and a conditional-Gaussian baseline at equal engine budget.
 
-![UI tour](ui/media/demo_ui_tour.gif)
+![UI tour](ui/media/demo_tour.gif)
 
 ## Where the LLM is used, and where it is not
 | Step | Who |
