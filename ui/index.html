@@ -23,17 +23,21 @@ select{font:inherit;padding:4px 8px;border-radius:6px;border:1px solid var(--lin
 .warn{border-left:4px solid var(--bad)}.brief{border-left:4px solid var(--acc)}.step{border-left:4px solid var(--line)}.step.llm{border-left-color:var(--llm)}
 .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0}.node{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 10px;font-size:13px}.node.llm{border-color:var(--llm)}.arrow{color:var(--mut)}
 details summary{cursor:pointer;color:var(--acc)}img,video{width:100%;max-width:820px;border-radius:8px;border:1px solid var(--line)}
+input[type=range]{width:100%}.ctl{display:grid;grid-template-columns:170px 1fr 70px;gap:8px;align-items:center;margin:4px 0;font-size:13px}.ctl output{text-align:right;font-variant-numeric:tabular-nums}
+.big{font-size:28px;font-weight:650;font-variant-numeric:tabular-nums}.ok{color:var(--good)}.no{color:var(--bad)}svg text{fill:var(--mut);font:11px system-ui}svg .ax{stroke:var(--line)}svg .tg{stroke:var(--bad);stroke-dasharray:4 3}
+button.sm{border:1px solid var(--line);background:var(--card);color:var(--fg);padding:4px 10px;border-radius:6px;cursor:pointer;font:inherit}@media(max-width:560px){.ctl{grid-template-columns:110px 1fr 56px}}
 </style>
 </head>
 <body>
 <header><h1>Reverse stress testing a NYISO power book with an LLM agent</h1><p class="sub">An end-to-end, public-data prototype for buy-side risk management. Each tab is one part of the project.</p></header>
 <nav id="nav"></nav>
 <main id="main">Loading...</main>
+<script src="engine.js"></script>
 <script>
 const $=(s,r=document)=>r.querySelector(s), fmtM=v=>v==null?'-':(v/1e6).toFixed(2)+'M', f2=v=>v==null?'-':(+v).toFixed(2);
-const D={};const TABS=['Brief','Pipeline','Data','Engine','LLM agent','Results','Evaluation','Limits','Demo'];let tab='Brief',run='live_daily_sonnet',sidx=0;
+const D={};const TABS=['Brief','Pipeline','Data','Engine','LLM agent','Try it','Results','Evaluation','Limits','Demo'];let tab='Brief',run='live_daily_sonnet',sidx=0;
 async function load(){
- for(const n of ['meta','runs','scenarios','factors','ablations']) D[n]=await (await fetch('data/'+n+'.json')).json();
+ for(const n of ['meta','runs','scenarios','factors','ablations','engine']) D[n]=await (await fetch('data/'+n+'.json')).json();
  $('#nav').innerHTML=TABS.map(t=>'<button data-t="'+t+'">'+t+'</button>').join('');
  $('#nav').onclick=e=>{if(e.target.dataset.t){tab=e.target.dataset.t;draw()}};draw()}
 function bars(obj,max,cls){const m=max||Math.max(...Object.values(obj).map(Math.abs),1);
@@ -41,6 +45,39 @@ function bars(obj,max,cls){const m=max||Math.max(...Object.values(obj).map(Math.
 function sel(){return '<select id="run">'+Object.entries(D.runs).map(([k,v])=>'<option value="'+k+'"'+(k==run?' selected':'')+'>'+v.label+'</option>').join('')+'</select>'}
 function node(t,llm){return '<span class="node'+(llm?' llm':'')+'">'+t+'</span>'}
 const ar='<span class="arrow">&rarr;</span>';
+
+const SB={season:'winter',shock:{duration_days:7,gas_hh_pct:0,ny_gas_basis_usd:0,load_peak_ratio:1,dc_load_shock_mw:0,wh_onpeak_pct:0,dom_minus_wh_usd:150,dart_pct:0}};
+const SL=[['duration_days','Duration (days)',0,30,1],['gas_hh_pct','Henry Hub gas (%)',-60,300,5],['ny_gas_basis_usd','N.Y. gas basis ($/MMBtu)',0,20,0.5],['load_peak_ratio','Peak load ratio',0.8,1.3,0.01],['dc_load_shock_mw','Large-load shock (MW)',-2000,2000,50],['wh_onpeak_pct','WEST on-peak price (%)',-80,200,5],['dom_minus_wh_usd','N.Y.C. minus WEST ($/MWh)',-100,500,10],['dart_pct','Real-time vs day-ahead (%)',-90,300,5]];
+const MAPK={large_load_shock_mw:'dc_load_shock_mw',ref_onpeak_pct:'wh_onpeak_pct',pocket_minus_ref_usd:'dom_minus_wh_usd'};
+function fromAgent(sh){const o={};for(const[k,v]of Object.entries(sh)){const e=MAPK[k]||k;if(e in RevEngine.NEUTRAL)o[e]=v}return o}
+function tick(v){return Math.abs(v)>=1e6?(v/1e6).toFixed(1)+'M':Math.abs(v)>=1000?(v/1000).toFixed(0)+'k':v.toFixed(0)}
+function lineChart(title,unit,xs,series,opt){opt=opt||{};const W=520,H=210,L=44,R=10,T=22,B=26;
+ const all=series.flatMap(s=>s.y).concat(opt.hline!=null?[opt.hline]:[]);let lo=Math.min(...all),hi=Math.max(...all);if(lo===hi){lo-=1;hi+=1}const pad=(hi-lo)*0.06;lo-=pad;hi+=pad;
+ const X=i=>L+(W-L-R)*i/(xs.length-1),Y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));let g='';
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+='<line class="ax" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'"/><text x="'+(L-4)+'" y="'+(Y(v)+4)+'" text-anchor="end">'+tick(v)+'</text>'}
+ if(opt.shade>0)g+='<rect x="'+X(0)+'" y="'+T+'" width="'+(X(Math.min(opt.shade,xs.length)-1)-X(0))+'" height="'+(H-T-B)+'" fill="var(--acc)" opacity="0.08"/>';
+ if(opt.hline!=null)g+='<line class="tg" x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(opt.hline)+'" y2="'+Y(opt.hline)+'"/><text x="'+(W-R)+'" y="'+(Y(opt.hline)-4)+'" text-anchor="end" style="fill:var(--bad)">'+opt.hlabel+'</text>';
+ series.forEach(s=>{g+='<polyline fill="none" stroke="'+s.color+'" stroke-width="'+(s.w||2)+'" '+(s.dash?'stroke-dasharray="5 4" ':'')+'points="'+s.y.map((v,i)=>X(i)+','+Y(v)).join(' ')+'"/>'});
+ [0,Math.floor((xs.length-1)/2),xs.length-1].forEach(i=>{g+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle">'+xs[i].slice(5)+'</text>'});
+ const lg=series.map(s=>'<span style="color:'+s.color+'">&#9632;</span> '+s.name).join(' &nbsp; ');
+ return '<div style="min-width:0"><b>'+title+'</b> <span style="color:var(--mut)">'+unit+'</span><svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="'+title+'">'+g+'</svg><div style="font-size:12px;color:var(--mut)">'+lg+'</div></div>'}
+function cumsum(daily){let c=0;return daily.map(d=>{c+=Object.values(d).reduce((a,b)=>a+b,0);return c})}
+function sbOut(){const E=D.engine;let r;try{r=RevEngine.run(E,SB.season,SB.shock)}catch(e){$('#sbout').innerHTML='<div class="card warn">'+e.message+'</div>';return}
+ const sc=r.score,xs=r.path.map(x=>x.date),base=E.seasons[SB.season].rows,dur=Math.round(SB.shock.duration_days);
+ const bpath=base.map(x=>Object.assign({},x,{capped:false}));const cb=cumsum(RevEngine.pnl(E,bpath)),cs=cumsum(r.daily),rel=cs.map((v,i)=>v-cb[i]);
+ const win=[...E.q.window_d2].sort((a,b)=>b-a),line5=win[Math.ceil(0.05*win.length)-1];
+ const verdict=r.breach?'<span class="ok">Breach: loss at least $5M, q below 5%, rules passed</span>':(r.loss_usd>=E.target_usd?'<span class="no">Loses $5M but is not a valid breach ('+(sc.severity==='implausible'?'implausible':'q = '+sc.q.toFixed(3)+', '+sc.severity)+')</span>':'<span style="color:var(--mut)">Below the $5M target</span>');
+ $('#sbout').innerHTML='<div class="card"><div class="row"><div><div style="color:var(--mut)">Scenario loss (vs unshocked path)</div><div class="big">'+fmtM(r.loss_usd)+'</div><div>'+verdict+'</div></div><div><span class="pill">D&sup2; '+sc.d2.toFixed(0)+'</span><span class="pill">rank q '+sc.q.toFixed(3)+'</span><span class="pill">'+sc.severity+'</span>'+(sc.marginals_exceeded.length?'<span class="pill no">beyond limit: '+sc.marginals_exceeded.join(', ')+'</span>':'')+(sc.hard_rule_failures.length?'<span class="pill no">'+sc.hard_rule_failures.join(', ')+'</span>':'')+'<p style="color:var(--mut);font-size:13px">q is the share of '+E.q.window_d2.length+' historical 10-day windows at least as extreme as the worst scenario day ('+sc.worst_day+'). It is a rank, not a probability.</p></div></div></div>'+
+ '<div class="card"><div class="row"><div><b>P&amp;L by position</b>'+bars(r.pnl_by_position)+'</div><div><b>P&amp;L by channel</b>'+bars(r.pnl_by_channel)+'</div></div></div>'+
+ '<div class="card"><div class="row">'+lineChart('WEST on-peak price','$/MWh',xs,[{name:'unshocked',y:base.map(x=>x.wh_on),color:'var(--mut)',dash:1},{name:'scenario',y:r.path.map(x=>x.wh_on),color:'var(--acc)'}],{shade:dur})+
+ lineChart('N.Y.C. minus WEST spread','$/MWh',xs,[{name:'unshocked',y:base.map(x=>x.dom_on-x.wh_on),color:'var(--mut)',dash:1},{name:'scenario',y:r.path.map(x=>x.dom_on-x.wh_on),color:'var(--llm)'}],{shade:dur})+'</div></div>'+
+ '<div class="card"><div class="row">'+lineChart('Cumulative book P&L effect of the shock','USD',xs,[{name:'scenario minus unshocked',y:rel,color:'var(--bad)'}],{shade:dur,hline:-E.target_usd,hlabel:'-$5M target'})+
+ lineChart('Plausibility D&sup2; per day','5-factor Mahalanobis',xs,[{name:'scenario',y:sc.d2_daily,color:'var(--acc)'}],{shade:dur,hline:line5,hlabel:'q = 5% line'})+'</div><p style="color:var(--mut);font-size:13px">Shaded days carry the shock; later days show the persistence tail. Computed in your browser by a port of the Python engine, checked against it on 18 reference cases.</p></div>'}
+function setCtl(){SL.forEach(([k])=>{$('#sl_'+k).value=SB.shock[k];$('#o_'+k).textContent=SB.shock[k]})}
+function sbBind(){const E=D.engine;$('#sbseason').onchange=e=>{SB.season=e.target.value;sbOut()};
+ SL.forEach(([k])=>{const el=$('#sl_'+k);el.oninput=()=>{SB.shock[k]=+el.value;$('#o_'+k).textContent=el.value;sbOut()}});
+ $('#sbpre').onchange=e=>{const s=D.scenarios.filter(x=>x.run=='live_daily_sonnet')[+e.target.value];if(!s)return;if(s.season in E.seasons)SB.season=s.season;SB.shock=Object.assign({},RevEngine.NEUTRAL,fromAgent(s.shocks));$('#sbseason').value=SB.season;setCtl();$('#sbnote').textContent=(s.shocks.spike_days>0?'Spike days in this scenario are ignored here. ':'')+'Loaded: '+s.narrative.slice(0,170)+'...';sbOut()};
+ $('#sbreset').onclick=()=>{SB.shock=Object.assign({},RevEngine.NEUTRAL,{duration_days:7});setCtl();$('#sbpre').value='';$('#sbnote').textContent='';sbOut()};sbOut()}
 const V={
 Brief(){const r=D.runs['live_daily_sonnet'];const cl=r.arms.find(a=>a.arm=='claude'),op=r.arms.find(a=>a.arm=='optimizer');
  return '<div class="card brief"><h2>The assignment</h2><p style="font-style:italic;color:var(--mut)">Students choose a topic relevant to real-world investment management and vibe-code an end-to-end solution that leverages LLM as needed, scoped so that a working prototype runs on public data.</p></div>'+
@@ -77,6 +114,11 @@ Engine(){const w=D.factors.walk_forward;const t=[...new Set(w.map(x=>x.target))]
  '<div class="card step"><h3>3 Engine computes the P&amp;L</h3><div class="row"><div><b>by position</b>'+bars(s.pnl_by_position)+'</div><div><b>by channel</b>'+bars(s.pnl_by_channel)+'</div></div><p>Total loss <b>'+fmtM(s.loss_usd)+'</b>'+(s.stated_loss_usd?' (Claude estimated '+fmtM(s.stated_loss_usd)+')':'')+'</p></div>'+
  '<div class="card step"><h3>4 Plausibility</h3><span class="pill">D&sup2; '+s.d2.toFixed(0)+'</span><span class="pill">rank q '+s.q.toFixed(3)+'</span><span class="pill">'+s.severity+'</span><span class="pill">nearest past date '+(s.nearest_date||'-')+'</span><div style="margin-top:6px">Analogue cited: '+(s.analogue.event||'none')+' '+(s.analogue.dates||'')+'</div></div>'+
  '<div class="card step llm"><h3>5 Independent coherence grade</h3>'+(s.coherence?'<table><tr>'+Object.entries(s.coherence).map(([k,v])=>'<th>'+k.replace(/_/g,' ')+'</th>').join('')+'</tr><tr>'+Object.values(s.coherence).map(v=>'<td>'+(v==null?'-':v==1?'pass':'fail')+'</td>').join('')+'</tr></table>'+(s.coherence_note?'<div style="color:var(--mut)">Judge: '+s.coherence_note+'</div>':''):'not graded for this run')+'<div style="color:var(--mut)">Graded blind by a different model than the one that wrote it. Human grading is still pending.</div></div>'},
+'Try it'(){const list=D.scenarios.filter(s=>s.run=='live_daily_sonnet').slice(0,30);
+ return '<div class="card"><h2>Write your own scenario</h2><p>Set a shock vector, the same typed signal Claude produces, and see the book loss, the price paths and how plausible the world is. Nothing is sent anywhere: the engine runs in this page.</p>'+
+ '<div class="ctl"><label for="sbseason">Season of the base window</label><select id="sbseason">'+['winter','summer','shoulder'].map(s=>'<option value="'+s+'"'+(s==SB.season?' selected':'')+'>'+s+'</option>').join('')+'</select><span></span></div>'+
+ '<div class="ctl"><label for="sbpre">Start from a ranked scenario</label><select id="sbpre"><option value="">(custom)</option>'+list.map((s,i)=>'<option value="'+i+'">#'+s.rank+' '+s.id+'</option>').join('')+'</select><button class="sm" id="sbreset">Reset</button></div><div id="sbnote" style="color:var(--mut);font-size:13px"></div>'+
+ SL.map(([k,l,lo,hi,st])=>'<div class="ctl"><label for="sl_'+k+'">'+l+'</label><input type="range" id="sl_'+k+'" min="'+lo+'" max="'+hi+'" step="'+st+'" value="'+SB.shock[k]+'"><output id="o_'+k+'">'+SB.shock[k]+'</output></div>').join('')+'</div><div id="sbout"></div>'},
 Results(){const list=D.scenarios.filter(s=>s.run==run).slice(0,30);
  return '<div class="card"><h2>Ranked scenarios</h2>Run '+sel()+' &middot; most plausible first (lowest D&sup2;) among those that lose at least $5M</div>'+
  '<div class="card"><table><tr><th>#</th><th>Scenario</th><th>Driver</th><th class=n>Loss</th><th class=n>D&sup2;</th><th class=n>q</th><th class=n>Coherence</th></tr>'+
@@ -91,7 +133,7 @@ Limits(){return '<div class="card warn"><h2>Limits and negative results</h2><ul>
 Demo(){return '<div class="card"><h2>Run it</h2><pre>python -E -P run_nyiso_demo.py --seed 0 --budget 144 --repeats 5          # offline, scripted Claude arm\npython -E -P run_nyiso_demo.py --live --i-understand-cost --model claude-sonnet-5-5   # live API\npython -E -P scripts/export_ui_data.py && cd ui && python -m http.server 8000</pre><p style="color:var(--mut)">Live runs need an API key and the explicit cost flag. Offline runs never call the API.</p></div>'+
  '<div class="card"><h2>Demo</h2><img src="media/demo_ui_tour.gif" alt="UI tour"><video controls src="media/demo.mp4" style="margin-top:12px" onerror="this.remove()"></video><p style="color:var(--mut)">Add a full recording as <code>ui/media/demo.mp4</code>.</p></div>'}};
 function draw(){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));$('#main').innerHTML=V[tab]();
- const s=$('#run');if(s)s.onchange=e=>{run=e.target.value;sidx=0;draw()};const c=$('#sc');if(c)c.onchange=e=>{sidx=+e.target.value;draw()}}
+ if(tab=='Try it')sbBind();const s=$('#run');if(s)s.onchange=e=>{run=e.target.value;sidx=0;draw()};const c=$('#sc');if(c)c.onchange=e=>{sidx=+e.target.value;draw()}}
 load().catch(e=>{$('#main').textContent='Could not load data/*.json: '+e+' (serve this folder: python -m http.server)'});
 </script>
 </body>
