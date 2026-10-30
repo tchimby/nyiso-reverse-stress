@@ -3,7 +3,7 @@
 IEOR 4723, AI-Augmented Investment Management, Columbia University. Final project (solo), October 2026.
 Topic: handout example 6, *Reverse Stress Testing Agent*, adapted to the New York wholesale power market.
 
-Interactive version: https://claude.ai/artifact/UnzNC9VinSZX1dX6wi8K2Y (the reader can write a scenario in plain English, run the engine, and grade scenarios). Code, data aggregates and run outputs: this repository.
+Interactive version: https://claude.ai/artifact/UnzNC9VinSZX1dX6wi8K2Y (the reader can write a scenario in plain English, run the engine, and grade scenarios). Code, data aggregates and run outputs: https://github.com/tchimby/nyiso-reverse-stress.
 
 ## Abstract
 
