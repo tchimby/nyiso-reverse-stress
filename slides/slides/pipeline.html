@@ -1,0 +1,35 @@
+<section id="pipeline" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">The solution</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">An agentic loop where Claude proposes and code decides</h2>
+<div style="display:flex;gap:16px;align-items:center">
+<div style="flex:1;background:#D9772B;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600">1. Propose</h3>
+<p style="font-size:23px;line-height:1.35">Claude writes 3 scenarios per call: narrative, typed shock vector, duration, analogue, confidence, own loss estimate</p>
+</div>
+<x-shape kind="arrow-right" style="background:#8FA3BC;width:48px;height:28px"></x-shape>
+<div style="flex:1;background:#14213D;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600">2. Gate</h3>
+<p style="font-size:23px;line-height:1.35">Schema, ranges, hard rules, price cap, check that a cited analogue exists</p>
+</div>
+<x-shape kind="arrow-right" style="background:#8FA3BC;width:48px;height:28px"></x-shape>
+<div style="flex:1;background:#14213D;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600">3. Engine</h3>
+<p style="font-size:23px;line-height:1.35">Shock to daily price path, P&amp;L by position and by channel, loss versus target</p>
+</div>
+<x-shape kind="arrow-right" style="background:#8FA3BC;width:48px;height:28px"></x-shape>
+<div style="flex:1;background:#14213D;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600">4. Plausibility</h3>
+<p style="font-size:23px;line-height:1.35">D² on five daily factors, rank q against 255 historical windows, severity class</p>
+</div>
+</div>
+<div style="display:flex;gap:16px;align-items:center;background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:24px 32px">
+<x-shape kind="arrow-left" style="background:#D9772B;width:56px;height:30px"></x-shape>
+<p style="font-size:26px;line-height:1.35;color:#1F2937;flex:1"><b>5. Feedback.</b> Engine loss, plausibility class, one-at-a-time sensitivities and the soft-penalty state return to Claude for its next call. 14 calls per repeat; every call logged with prompt hash, messages and verdicts.</p>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;gap:14px;align-items:center"><x-shape kind="rounded" style="background:#D9772B;width:32px;height:32px"></x-shape><p style="font-size:24px;color:#4A5568">Claude (Sonnet 5.5; Haiku 5.5 as the cheap comparison). It never sees prices to forecast.</p></div>
+<div style="flex:1;display:flex;gap:14px;align-items:center"><x-shape kind="rounded" style="background:#14213D;width:32px;height:32px"></x-shape><p style="font-size:24px;color:#4A5568">Deterministic Python code. A different model (Opus 5.5) grades coherence blind at the end.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">4 · revstress/agent, revstress/shock.py, revstress/risk</p>
+<aside>The split is the point: the LLM only writes worlds in a typed vocabulary. Pricing, plausibility and acceptance are code, so nothing the model says can move the numbers.</aside>
+</section>

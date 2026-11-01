@@ -1,0 +1,19 @@
+<section id="limits" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Limits</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">What this prototype does not establish</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px 48px">
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>One seed per run.</b> Breach counts move by 2-3 across draws.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Unequal budgets.</b> Claude uses 42 engine calls, the baselines 144.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Single-channel book,</b> not recalibrated on the final engine; the $5M target is reachable by ordinary worlds there.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Daily averaging</b> hides hourly spikes of 3,000-4,500 $/MWh; P3 and P6 are understated.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>No daily New York gas series:</b> the basis is an explicit shock, not a factor.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>LLM-only coherence grades.</b> The pre-registered human rater is still pending; the demo lets one grade 20 scenarios blind.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Seven years of history,</b> few independent extremes; q is a rank against 255 windows, not a probability.</p></div>
+<div style="display:flex;gap:16px;align-items:start"><x-shape kind="ellipse" style="background:#D9772B;width:16px;height:16px"></x-shape><p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Stated assumptions:</b> $5,000/MWh cap; analogue figures verified for four events only.</p></div>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:24px 32px">
+<p style="font-size:25px;line-height:1.4;color:#1F2937"><b>Fixable next:</b> ask the prompt to justify each shock’s size (the weakest coherence item), run several seeds, size a book on the final engine, add an hourly spike overlay.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">16 · REPORT.md section 8</p>
+<aside>Each limit is listed with its evidence in the report. None was discovered after the fact; most were written as risks in the plan.</aside>
+</section>

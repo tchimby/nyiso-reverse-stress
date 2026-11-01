@@ -1,0 +1,36 @@
+<section id="fantasy" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Keeping the LLM from fantasy</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Five guards in code, and every call on the record</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">1. Schema with ranges</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Eight keys, each bounded by history. Anything else is rejected before the engine.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">2. Hard rules</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">A shock that contradicts its own narrative, or a duration past 30 days, fails the gate.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">3. Analogue table</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Four verified events to cite; a cited analogue that is not in the table is flagged as fabricated.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">4. Marginal ceilings</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">No single shock beyond 1.25× its historical extreme; a $5,000/MWh price cap.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">5. Soft penalty</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Reusing the same driver family costs score, so the search is pushed to cover more worlds.</p>
+</div>
+<div style="background:#14213D;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600;color:#E8A060">Audit log</h3>
+<p style="font-size:24px;line-height:1.4;color:#C9D3E0">Prompt version and hash, messages in and out, model, cache key, engine verdicts. Every scenario is reproducible from its line.</p>
+</div>
+</div>
+<div style="display:flex;gap:48px;background:#E9E5D9;border-radius:16px;padding:24px 32px">
+<p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>Final run:</b> 0 of 177 scenarios rejected by a hard rule; the driver-overuse penalty fired on 64-71% of proposals. The agent concentrates on cold snaps once it finds they work.</p>
+<p style="font-size:25px;line-height:1.4;color:#1F2937;flex:1"><b>At the end:</b> a different model, Opus 5.5, grades each ranked scenario blind on five coherence items; a human can do the same in the demo.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">8 · revstress/agent/rules.py, outputs/live_daily_sonnet/audit_log*.jsonl</p>
+<aside>The brief says the project "forces groups to think about how to keep an LLM from generating fantasy". These are the answers, and none of them trusts the model's own words.</aside>
+</section>

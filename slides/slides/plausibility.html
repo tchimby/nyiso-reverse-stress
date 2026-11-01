@@ -1,0 +1,36 @@
+<section id="plausibility" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Plausibility</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">History, not the model, says how plausible a world is</h2>
+<div style="display:flex;gap:32px;flex:1">
+<div style="flex:1;background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600">Five daily factors</h3>
+<ul style="font-size:25px;line-height:1.4;color:#1F2937;padding:0 0 0 30px;display:flex;flex-direction:column;gap:8px">
+<li><b>g</b> log Henry Hub gas</li>
+<li><b>l</b> log peak load versus seasonal normal</li>
+<li><b>s</b> WEST price residual after gas, load and season</li>
+<li><b>c</b> N.Y.C. minus WEST on-peak spread</li>
+<li><b>d</b> log real-time over day-ahead</li>
+</ul>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Mean and covariance per season: winter 632 days, summer 644, shoulder 1,281.</p>
+</div>
+<div style="flex:1;background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600">Distance and rank</h3>
+<p style="font-size:25px;line-height:1.4;color:#1F2937">A scenario’s 10-day average factor deviation gives a Mahalanobis <b>D²</b>.</p>
+<p style="font-size:25px;line-height:1.4;color:#1F2937"><b>q</b> is its rank among the 255 non-overlapping 10-day windows of 2019-2025. A rank, not a probability.</p>
+<p style="font-size:25px;line-height:1.4;color:#1F2937">Classes: ordinary q &gt; 5%, adverse 1-5%, severe &lt; 1%. Implausible if a marginal shock exceeds 1.25× the historical extreme or a hard rule fails.</p>
+</div>
+<div style="flex:1;background:#14213D;color:#F7F5EF;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600;color:#E8A060">What counts as a breach</h3>
+<p style="font-size:25px;line-height:1.4;color:#C9D3E0">A distinct scenario with</p>
+<ul style="font-size:25px;line-height:1.4;color:#F7F5EF;padding:0 0 0 30px;display:flex;flex-direction:column;gap:8px">
+<li>loss ≥ $5M</li>
+<li>q &lt; 5%</li>
+<li>all hard rules passed</li>
+<li>not implausible</li>
+</ul>
+<p style="font-size:24px;line-height:1.4;color:#C9D3E0">Breaches per repeat is the headline metric; median D² is the plausibility metric.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">6 · revstress/risk/plausibility.py, covariance.py</p>
+<aside>This is the "staying plausible given historical covariance" requirement. Nothing here is tuned to make scenarios pass; thresholds were fixed before any live run.</aside>
+</section>

@@ -1,0 +1,35 @@
+<section id="results" data-transition="fade" style="background:#14213D;color:#F7F5EF;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#E8A060;font-weight:500">Results, final engine</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Claude finds more breaches; the optimizer finds more plausible ones</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;background:#1E2E52;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;color:#8FA3BC">Claude, Sonnet 5.5</p>
+<p style="font-family:'EB Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1;color:#E8A060">11.2</p>
+<p style="font-size:24px;color:#C9D3E0">breaches per repeat, ± 0.4</p>
+</div>
+<div style="flex:1;background:#1E2E52;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;color:#8FA3BC">Optimizer</p>
+<p style="font-family:'EB Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1">8.0</p>
+<p style="font-size:24px;color:#C9D3E0">breaches per repeat, ± 1.4</p>
+</div>
+<div style="flex:1;background:#1E2E52;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;color:#8FA3BC">Conditional-Gaussian</p>
+<p style="font-family:'EB Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1">0.2</p>
+<p style="font-size:24px;color:#C9D3E0">breaches per repeat, ± 0.4</p>
+</div>
+<div style="flex:1;background:#1E2E52;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-size:24px;color:#8FA3BC">Random</p>
+<p style="font-family:'EB Garamond', Georgia, serif;font-size:88px;font-weight:600;line-height:1">0</p>
+<p style="font-size:24px;color:#C9D3E0">breaches per repeat</p>
+</div>
+</div>
+<table style="width:100%;font-size:26px;color:#F7F5EF;border:1px solid #3A4A70">
+<tr style="background:#1E2E52"><th style="width:28%">Arm</th><th style="width:18%">Median D² (lower = more plausible)</th><th style="width:14%">Median q</th><th style="width:20%">Driver coverage</th><th style="width:20%">Engine calls per repeat</th></tr>
+<tr><td>Claude (Sonnet 5.5)</td><td>156</td><td>0.014</td><td style="color:#E8A060">0.34</td><td>42</td></tr>
+<tr><td>Optimizer</td><td style="color:#E8A060">93</td><td>0.041</td><td>0.20</td><td>144</td></tr>
+<tr><td>Conditional-Gaussian</td><td>89</td><td>0.047</td><td>0.03</td><td>144</td></tr>
+</table>
+<p style="font-size:25px;line-height:1.4;color:#C9D3E0">As predicted: the optimizer wins on plausibility (D² 93 vs 156). Claude wins on driver coverage, 0.34 vs 0.20. Channel coverage is 0.17 for both: every breach loses through the N.Y.C. load obligation. Claude’s stated loss is within 20% of the engine’s for 92% of scenarios.</p>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#8FA3BC">10 · outputs/live_daily_sonnet/comparison_table.csv, seed 0, 5 repeats, 177 scenarios, 0.86M tokens in, 0.32M out, 12 min</p>
+<aside>Read the breach counts with care: one seed, Claude uses 42 engine calls against 144, and the book was not re-sized for this engine. The plausibility ordering is the robust finding; it held on every engine version.</aside>
+</section>

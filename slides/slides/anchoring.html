@@ -1,0 +1,20 @@
+<section id="anchoring" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Ablation</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Does the agent reach the tail because it understands the book, or because the prompt says $5M?</h2>
+<div style="display:flex;gap:32px;flex:1;align-items:start">
+<table style="width:1060px;font-size:26px;color:#1F2937;background:#FFFFFF;border:1px solid #DDD8CC">
+<tr style="background:#E9E5D9"><th style="width:28%">One run per model</th><th style="width:36%">Target shown in prompt</th><th style="width:36%">Target hidden</th></tr>
+<tr><td><b>Haiku 5.5</b></td><td>63 scenarios · median loss $5.77M · 73% above target · 11 breaches</td><td>24 scenarios · median loss $1.95M · 12.5% above target · <b>0 breaches</b></td></tr>
+<tr><td><b>Sonnet 5.5</b></td><td>33 scenarios · median loss $6.70M · 100% above target · 10 breaches</td><td>33 scenarios · median loss $8.64M · 88% above target · 3 breaches</td></tr>
+</table>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#14213D;color:#F7F5EF;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px">
+<h3 style="font-size:28px;font-weight:600;color:#E8A060">Model-dependent</h3>
+<p style="font-size:24px;line-height:1.4;color:#C9D3E0">Haiku’s severity follows the stated target; without it the proposals never reach the tail. Sonnet without a target proposes harsher worlds, and fewer count as breaches because more fall past the plausibility limits.</p>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">The two arms are not the same task (a goal versus no goal), so this shows dependence on the target, not that the scenarios are invented. For Sonnet the target mainly restrains severity.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">13 · outputs/live_anchoring, live_anchoring_sonnet; single run each, seed 0</p>
+<aside>Severity anchoring was a stated risk in the plan. The honest answer: it is real for the small model and not for the larger one.</aside>
+</section>

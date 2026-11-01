@@ -1,0 +1,27 @@
+<section id="shocks" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">The schema</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Claude speaks in eight typed shocks, never in prices</h2>
+<div style="display:flex;gap:48px;flex:1">
+<table style="width:1000px;font-size:25px;color:#1F2937;background:#FFFFFF;border:1px solid #DDD8CC">
+<tr style="background:#E9E5D9"><th style="width:34%">Shock key</th><th style="width:48%">Meaning, relative to the unshocked path</th><th style="width:18%">Unit</th></tr>
+<tr><td>gas_hh_pct</td><td>Henry Hub gas change</td><td>%</td></tr>
+<tr><td>ny_gas_basis_usd</td><td>Extra New York gas cost in the heat-rate call</td><td>$/MMBtu</td></tr>
+<tr><td>load_peak_ratio</td><td>Peak load versus its seasonal normal</td><td>ratio</td></tr>
+<tr><td>large_load_shock_mw</td><td>Large-load shortfall in the pocket</td><td>MW</td></tr>
+<tr><td>ref_onpeak_pct</td><td>Extra WEST on-peak move beyond gas and load</td><td>%</td></tr>
+<tr><td>pocket_minus_ref_usd</td><td>Extra N.Y.C. minus WEST spread</td><td>$/MWh</td></tr>
+<tr><td>dart_pct</td><td>Real-time versus day-ahead</td><td>%</td></tr>
+<tr><td>duration_days</td><td>Shocked days, at most 30</td><td>days</td></tr>
+</table>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#14213D;color:#F7F5EF;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:28px;font-weight:600;color:#E8A060">One scenario, as Claude returns it</h3>
+<p style="font-family:'Courier New', monospace;font-size:22px;line-height:1.4;color:#C9D3E0">{"gas_hh_pct": 20, "ny_gas_basis_usd": 8, "load_peak_ratio": 1.03, "pocket_minus_ref_usd": 300, "dart_pct": 120, "duration_days": 7}</p>
+<p style="font-size:23px;line-height:1.4;color:#C9D3E0">plus a narrative, an analogue (Winter Storm Elliott, Dec 2022), a confidence and its own loss estimate ($7.0M; engine: $7.22M)</p>
+</div>
+<p style="font-size:25px;line-height:1.4;color:#4A5568">The engine applies the shock for the stated days, then lets price-level and spread effects decay as φ^k with φ ≈ 0.55 and 0.59, the persistence measured in history. P&amp;L is shocked path minus unshocked path.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">5 · revstress/agent/schema.py, revstress/shock.py</p>
+<aside>The vocabulary is deliberately narrow. Claude cannot say "WEST goes to 400 dollars"; it can only say how far the world moves from what gas and load already imply, and for how long.</aside>
+</section>

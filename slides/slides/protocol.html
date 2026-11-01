@@ -1,0 +1,36 @@
+<section id="protocol" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Evaluation design</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Three baselines at equal budget, and a bet placed before the runs</h2>
+<div style="display:flex;gap:48px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:28px;font-weight:600">Random search</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Shock vectors drawn inside the ranges. 144 engine calls per repeat.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:28px;font-weight:600">Optimizer (SLSQP)</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Minimize D² subject to loss ≥ $5M. 144 calls.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:28px;font-weight:600">Conditional-Gaussian</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">The most likely factor state given the loss (Sparviero &amp; Viola). 144 calls.</p>
+</div>
+<div style="background:#D9772B;color:#F7F5EF;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-size:28px;font-weight:600">Claude agent</h3>
+<p style="font-size:24px;line-height:1.4">14 calls × 3 scenarios per repeat, uses only the engine calls it needs (42). 5 repeats, seed 0.</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#14213D;color:#F7F5EF;border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:14px">
+<p style="font-size:24px;color:#8FA3BC;text-transform:uppercase;letter-spacing:2px">Hypothesis, written in the plan before any live run</p>
+<p style="font-family:'EB Garamond', Georgia, serif;font-size:40px;font-weight:600;line-height:1.2">The optimizer wins on D². Claude must win on coverage and coherence, or the result is reported as negative.</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">Metrics</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Breaches per repeat · median D² and q · driver and channel coverage · stated versus engine loss · blind coherence (0-1) by a different model</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">9 · docs/PLAN.md section 1, revstress/baselines</p>
+<aside>Equal engine budget for the baselines; Claude is allowed fewer calls, which is noted whenever its breach count is compared. The hypothesis is in the plan file with its date.</aside>
+</section>

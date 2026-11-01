@@ -1,0 +1,27 @@
+<section id="models" data-transition="fade" style="background:#F7F5EF;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;letter-spacing:4px;text-transform:uppercase;color:#D9772B;font-weight:500">Which model</p>
+<h2 style="font-family:'EB Garamond', Georgia, serif;font-size:64px;font-weight:600;line-height:1.1">Sonnet finds 2.7× more breaches than Haiku, with no gain in coherence</h2>
+<div style="display:flex;gap:48px;flex:1;align-items:start">
+<table style="width:1040px;font-size:26px;color:#1F2937;background:#FFFFFF;border:1px solid #DDD8CC">
+<tr style="background:#E9E5D9"><th style="width:46%">Same protocol, earlier engine</th><th style="width:27%">Sonnet 5.5</th><th style="width:27%">Haiku 5.5</th></tr>
+<tr><td>Breaches per repeat</td><td style="color:#D9772B"><b>9.8 ± 2.8</b></td><td>3.6 ± 2.3</td></tr>
+<tr><td>Median D²</td><td>159</td><td>145</td></tr>
+<tr><td>Ranked-eligible / scenarios</td><td>55 / 170</td><td>18 / 165</td></tr>
+<tr><td>Stated loss within 20% of engine</td><td>96%</td><td>78-95%</td></tr>
+<tr><td>Coherence, same blind judge (Opus 5.5)</td><td>0.578</td><td>0.611</td></tr>
+<tr><td>Wall time, 5 parallel repeats</td><td>12 min</td><td>4.7 min</td></tr>
+</table>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#FFFFFF;border:1px solid #DDD8CC;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600">Coherence on the final run</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5568">Opus 5.5, blind, 59 scenarios, mean 0.66. Causal chain 43/59, duration 57/59, analogue 33/59, no contradiction 36/59, shocks explained 27/59. The weak item: a narrative names a shock without saying why that size.</p>
+</div>
+<div style="background:#14213D;color:#F7F5EF;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:600;color:#E8A060">Breach counts are noisy</h3>
+<p style="font-size:24px;line-height:1.4;color:#C9D3E0">Five separate Haiku runs gave 10, 6, 9, 9 and 4 breaches. One seed, dispersion of 2-3: no single mean should be quoted as the level.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#6B7280">12 · outputs/live_full_sonnet, live_full, coherence_opus_*; baselines identical in both runs (optimizer 15.4, cond-Gaussian 4.4)</p>
+<aside>Two LLM judges, Sonnet and Opus, agree on the 18 Haiku scenarios with kappa from 0.47 to 1.00; Opus is stricter. An LLM judge is not the human rater the plan pre-registered.</aside>
+</section>

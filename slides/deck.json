@@ -1,0 +1,18 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-11-01T10:00:00Z"},
+  "lists": "css",
+  "title": "NYISO Reverse Stress Testing Agent",
+  "order": ["cover", "question", "book", "pipeline", "shocks", "plausibility", "dailymodel", "fantasy", "protocol", "results", "ranked", "models", "anchoring", "factors", "negative", "limits", "demo"],
+  "sections": {
+    "intro": {"description": "The question the project answers and the book it is asked about", "start": "cover"},
+    "method": {"description": "How Claude, the engine and the plausibility model divide the work", "start": "pipeline"},
+    "results": {"description": "What the agent found against three baselines, and what the factors say", "start": "protocol"},
+    "honest": {"description": "Negative results, limits and the live demo", "start": "negative"}
+  },
+  "faces": {
+    "eb-garamond": {"family": "EB Garamond", "href": "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400&display=swap"},
+    "ibm-plex-sans": {"family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"}
+  },
+  "designSystems": []
+}
