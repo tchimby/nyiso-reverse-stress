@@ -18,3 +18,6 @@ outputs/synthetic*
 outputs/nyiso_demo_dry_run/
 outputs/dry_run/
 outputs/offline_daily_*/
+
+# built intermediates
+slides/deck_print.html
